@@ -1,6 +1,9 @@
-asgiref==3.5.0
-Django==4.0.2
+asgiref==3.8.1
+crispy-bootstrap4==2024.1
+Django==4.2.13
+django-crispy-forms==2.2
 psycopg2-binary==2.9.9
 python-decouple==3.8
 sqlparse==0.4.2
+typing_extensions==4.12.2
 tzdata==2021.5
