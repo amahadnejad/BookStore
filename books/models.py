@@ -10,4 +10,4 @@ class Book(models.Model):
     datetime_modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.author}: {self.title}"
