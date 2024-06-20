@@ -8,3 +8,7 @@ class BookListView(generic.ListView):
     template_name = "books/book_list.html"
 
 
+class BookDetailView(generic.DetailView):
+    model = Book
+    context_object_name = 'book'
+    template_name = 'Books/book_detail.html'
