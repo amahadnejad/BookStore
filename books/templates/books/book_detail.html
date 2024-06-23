@@ -8,5 +8,6 @@
     <p>{{ book.description }}</p>
     <br>
     <a href="{% url 'book_update' book.id %}"><button class="btn btn-info">Edit</button></a>
+    <a href="{% url 'book_delete' book.id %}"><button class="btn btn-danger">Delete</button></a>
     <a href="{% url 'book_list' %}"><button class="btn btn-primary">Back To List</button></a>
 {% endblock content %}
