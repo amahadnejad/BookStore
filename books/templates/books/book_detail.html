@@ -2,10 +2,10 @@
 
 {% block page_title %}Detail of {{ book.title }}{% endblock page_title %}
 {% block content %}
-    <h1>{{ book.title }}</h1>
-    <h3>{{ book.author }} | {{ book.datetime_created }}</h3>
+    <h1>{{ book.title|capfirst }}</h1>
+    <h3>{{ book.author|capfirst }} | {{ book.datetime_created }}</h3>
     <h4>{{ book.price }}</h4>
-    <p>{{ book.description }}</p>
+    <p>{{ book.description|linebreaksbr }}</p>
     <br>
     <a href="{% url 'book_update' book.id %}"><button class="btn btn-info">Edit</button></a>
     <a href="{% url 'book_delete' book.id %}"><button class="btn btn-danger">Delete</button></a>
