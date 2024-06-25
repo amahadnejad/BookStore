@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>{% block page_title %}{% endblock page_title %}</title>
+
+    {% block styles %}
+
+    {% endblock styles %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-info" dir="rtl">
@@ -34,12 +38,13 @@
             </div>
         </div>
         {% if user.is_authenticated %}
-            <div class="mx-2 text-white">خوش آمدی{{ user.username }} | <a class="link-light text-decoration-none" href="{% url 'logout' %}">خروج</a>
-            {% else %}
+            <div class="mx-2 text-white">خوش آمدی{{ user.username }} |
+            <a class="link-light text-decoration-none" href="{% url 'logout' %}">خروج</a>
+        {% else %}
             <a href="{% url 'login' %}" class="link-light text-decoration-none">login</a>
             <span class="text-light text-decoration-none"> | </span>
             <a href="{% url 'signup' %}" class="link-light text-decoration-none">signup</a>
-        {% endif %} 
+        {% endif %}
 
         </div>
     </div>
