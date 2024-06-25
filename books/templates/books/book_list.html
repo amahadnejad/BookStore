@@ -1,5 +1,7 @@
 {% extends "_base.html" %}
 
+{% load static %}
+
 {% block page_title %}Books{% endblock page_title %}
 {% block content %}
 
@@ -14,6 +16,9 @@
                                 <img src="{{ book.cover.url }}"
                                      class="img-fluid rounded-start" alt="...">
                             </div>
+                        {% else %}
+                            <img src="{% static 'icons/no-imange.png' %}"
+                                     class="img-fluid rounded-start" alt="...">
                         {% endif %}
 
                         <div class="col-md-8 h-100">
