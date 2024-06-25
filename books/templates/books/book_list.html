@@ -10,14 +10,14 @@
                 <div class="card m-2" style="max-width: 45%">
                     <div class="row g-0 h-100" dir="rtl">
                         <div class="col-md-4">
-                            <img src="https://newcdn.fidibo.com/images/books/69249_94233_normal.jpg"
+                            <img src="https://cdn.fidibo.com/phoenixpub/content/42754a67-85dd-40f6-88d1-8041f6e08328/d58e68ed-d2e6-47bf-8e24-fe6dd7526072.jpg?width=192"
                                  class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8 h-100">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="card-body">
-                                    <h3 class="card-title"><strong>{{ book.title }}</strong></h3>
-                                    <p class="card-text pt-3">{{ book.description|truncatewords:50 }}</p>
+                                    <a href="{{ book.get_absolute_url }}" class="text-decoration-none"><h3 class="card-title"><strong>{{ book.title }}</strong></h3></a>
+                                    <p class="card-text pt-3">{{ book.description|truncatewords:30 }}</p>
                                     <p class="text-muted">author: {{ book.author }} </p>
                                 </div>
                             </div>
