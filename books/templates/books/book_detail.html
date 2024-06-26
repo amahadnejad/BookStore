@@ -9,9 +9,12 @@
                 <div class="d-flex justify-content-center">
                     <div class="row w-sm-75 w-100">
                         <div class="col-xs-12 col-md-3 d-flex justify-content-center">
-                            <div>
-                                <img src="https://cdn.fidibo.com/phoenixpub/content/42754a67-85dd-40f6-88d1-8041f6e08328/d58e68ed-d2e6-47bf-8e24-fe6dd7526072.jpg?width=192"
-                                     class="img-fluid rounded-start" alt="...">
+                            <div class="shadow">
+                                {% if book.cover %}
+                                    <img src="{{ book.cover.url }}"
+                                         class="img-fluid rounded-start" alt="...">
+                                {% endif %}
+
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6 text-center text-md-end mt-md-1 mt-4">

@@ -12,13 +12,15 @@
                 <div class="card m-2" style="max-width: 45%">
                     <div class="row g-0 h-100" dir="rtl">
                         {% if book.cover %}
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-1">
                                 <img src="{{ book.cover.url }}"
                                      class="img-fluid rounded-start" alt="...">
                             </div>
                         {% else %}
-                            <img src="{% static 'icons/no-imange.png' %}"
+                            <div class="col-md-4 mt-2">
+                            <img src="{% static 'icons/no-image.png' %}"
                                      class="img-fluid rounded-start" alt="...">
+                            </div>
                         {% endif %}
 
                         <div class="col-md-8 h-100">
