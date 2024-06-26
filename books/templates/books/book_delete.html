@@ -2,13 +2,43 @@
 
 {% block page_title %}Delete {{ book.title }}{% endblock page_title %}
 {% block content %}
-    <h1>Are You Sure?</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        <p>Do you really want to delete {{ book.title }} book?</p>
-        <button type="submit" class="btn btn-danger">Delete</button>
-        <a href="{% url 'book_list' %}" class="btn btn-success">Cancel</a>
-    </form>
+    <div class="container mt-4" dir="rtl">
+        <div class="row">
+            <div class="col-9">
+                <div class="card shadow my-3">
+                    <h5 class="card-header bg-success text-light px-5">حذف کتاب {{ book.title }}</h5>
+                    <div class="px-5 pt-3 pb-5">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <h5>آیا از حذف این کتاب مطمئن هستید؟</h5>
+                            <button type="submit" class="btn btn-danger mt-2">حذف</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+
+
+                <div class="card my-3 shadow">
+                    <h5 class="card-header bg-info text-light">تصویر کتاب</h5>
+                    <div class="image-container mx-auto">
+                        <div class="col-xs-15 col-md-10 d-flex justify-content-center mt-2">
+                            <div class="shadow">
+                                {% if book.cover %}
+                                    <img src="{{ book.cover.url }}"
+                                         class="img-fluid rounded-start" alt="...">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
 
 
 {% endblock content %}

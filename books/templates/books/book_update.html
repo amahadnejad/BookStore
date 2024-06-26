@@ -3,7 +3,7 @@
 
 {% block page_title %}Update {{ book.title }}{% endblock page_title %}
 {% block content %}
-     <div class="container mt-4" dir="rtl">
+    <div class="container mt-4" dir="rtl">
         <div class="row">
             <div class="col-9">
                 <div class="card shadow my-3">
@@ -17,6 +17,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-3">
                 <div class="card my-3 shadow">
                     <h5 class="card-header bg-warning text-light">راهنما</h5>
@@ -26,6 +27,21 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="card my-3 shadow">
+                    <h5 class="card-header bg-info text-light">تصویر کتاب</h5>
+                    <div class="image-container mx-auto">
+                        <div class="col-xs-15 col-md-10 d-flex justify-content-center mt-2">
+                            <div class="shadow">
+                                {% if book.cover %}
+                                    <img src="{{ book.cover.url }}"
+                                         class="img-fluid rounded-start" alt="...">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
