@@ -8,5 +8,9 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('user', 'book', 'text', 'datetime_created', )
 
 
-admin.site.register(Book)
+@admin.register(Book)
+class BookAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'price', 'cover', 'datetime_created', 'datetime_modified', )
+
+
 
