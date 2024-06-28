@@ -7,9 +7,12 @@ class Book(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
+    translator = models.CharField(max_length=200, blank=True)
+    publisher = models.CharField(max_length=200)
     description = models.TextField()
     price = models.PositiveIntegerField()
     cover = models.ImageField(upload_to='covers/', blank=True)
+    is_active = models.BooleanField(default=True)
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
