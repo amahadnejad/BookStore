@@ -30,6 +30,12 @@
                                             class="card-title"><strong>{{ book.title }}</strong></h3></a>
                                     <p class="card-text pt-3">{{ book.description|truncatewords:30 }}</p>
                                     <p class="text-muted">author: {{ book.author }} </p>
+                                    <div class="text-start">
+                                        <a href="{{ book.get_absolute_url }}">
+                                            <button class="btn btn-success">Read More</button>
+                                        </a>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +50,8 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center mt-3">
             {% if page_obj.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                </li>
             {% endif %}
             <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
             {% if page_obj.has_next %}
