@@ -34,13 +34,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">خانه</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">خانه</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">کتاب ها</a>
                 <a class="nav-link active" href="{% url 'book_create' %}">اضافه کردن کتاب</a>
             </div>
         </div>
         {% if user.is_authenticated %}
             <div class="mx-2 text-white">خوش آمدی{{ user.username }} |
-            <a class="link-light text-decoration-none" href="{% url 'logout' %}">خروج</a>
+            <a class="link-light text-decoration-none" href="{% url 'logout' %}">logout</a>
         {% else %}
             <a href="{% url 'login' %}" class="link-light text-decoration-none">login</a>
             <span class="text-light text-decoration-none"> | </span>
