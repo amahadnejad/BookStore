@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
+{% load humanize %}
 
 {% block page_title %}Detail of {{ book.title }}{% endblock page_title %}
 {% block content %}
@@ -34,7 +35,7 @@
                         </div>
                         <div class="col-xs-12 col-md-3 d-flex flex-column">
                             <h3 class="align-self-center pt-2 text-muted align-self-md-end">
-                                {{ book.price }} تومان
+                                {{ book.price|intcomma:False }} تومان
                             </h3>
                         </div>
                     </div>

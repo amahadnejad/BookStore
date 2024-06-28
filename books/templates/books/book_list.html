@@ -1,6 +1,7 @@
 {% extends "_base.html" %}
 
 {% load static %}
+{% load humanize %}
 
 {% block page_title %}Books{% endblock page_title %}
 {% block content %}
@@ -28,7 +29,8 @@
                                 <div class="card-body">
                                     <a href="{{ book.get_absolute_url }}" class="text-decoration-none"><h3
                                             class="card-title"><strong>{{ book.title }}</strong></h3></a>
-                                    <p class="card-text pt-3">{{ book.description|truncatewords:30 }}</p>
+                                    <p>قیمت: {{ book.price|intcomma:False }} تومان </p>
+                                    <p class="card-text pt-2">{{ book.description|truncatewords:30 }}</p>
                                     <p class="text-muted">author: {{ book.author }} </p>
                                     <div class="text-start">
                                         <a href="{{ book.get_absolute_url }}">
