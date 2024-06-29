@@ -12,7 +12,9 @@
                             {% csrf_token %}
                             <h5>آیا از حذف این کتاب مطمئن هستید؟</h5>
                             <button type="submit" class="btn btn-danger mt-2">حذف</button>
+                            <a href="{{ book.get_absolute_url }}" class="btn btn-info mt-2 text-light">لغو</a>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -27,7 +29,7 @@
                             <div class="shadow">
                                 {% if book.cover %}
                                     <img src="{{ book.cover.url }}"
-                                         class="img-fluid rounded-start" alt="...">
+                                         class="img-fluid rounded-start mb-3" alt="{{ book.title }}">
                                 {% endif %}
                             </div>
                         </div>
