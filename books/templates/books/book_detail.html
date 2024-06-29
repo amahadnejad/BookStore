@@ -27,9 +27,9 @@
                             {% endif %}
                             <h5 class="small my-1"><span class="text-muted">انتشارات: </span>{{ book.publisher }}</h5>
                             {% if book.user == user %}
-                                <a href="{% url 'book_update' book.id %}">ویرایش</a>
-                                <span>|</span>
-                                <a href="{% url 'book_delete' book.id %}">حذف</a>
+                                <a href="{% url 'book_update' book.id %}" class="btn btn-warning btn-sm">ویرایش</a>
+                                <span></span>
+                                <a href="{% url 'book_delete' book.id %}" class="btn btn-danger btn-sm">حذف</a>
                             {% endif %}
 
 
@@ -56,10 +56,11 @@
                                 {% if comment.is_active %}
                                     <div class="border-bottom mb-3">
                                         <h5 class="mb-3">{{ comment.user }}</h5>
+
                                         {% if comment.recommend %}
-                                            <p>این کتاب را توصیه میکنم</p>
+                                            <p class="text-muted">{{ comment.datetime_created|date }} | این کتاب را توصیه میکنم</p>
                                         {% else %}
-                                            <p>این کتاب را توصیه نمیکنم</p>
+                                            <p class="text-muted">{{ comment.datetime_created|date }} | این کتاب را توصیه نمیکنم</p>
                                         {% endif %}
                                         <p>{{ comment.text|linebreaksbr }}</p>
                                     </div>
