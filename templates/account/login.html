@@ -16,7 +16,7 @@
                 {{ form|crispy }}
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="mt-2">
-                        <a class="text-decoration-none" href="{% url 'password_reset' %}">فراموشی رمز عبور</a>
+                        <a class="text-decoration-none" href="{% url 'account_reset_password' %}">فراموشی رمز عبور</a>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success mt-3 w-100">ورود</button>
@@ -25,7 +25,7 @@
                     یا
                   </span>
                 </div>
-                <a href="{% url 'signup' %}" class="btn btn-primary mt-2 mb-3 w-100">ثبت نام</a>
+                <a href="{% url 'account_signup' %}" class="btn btn-primary mt-2 mb-3 w-100">ثبت نام</a>
             </form>
         </div>
 

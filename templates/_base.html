@@ -40,19 +40,26 @@
             </div>
         </div>
         {% if user.is_authenticated %}
-            <div class="mx-2 text-white">خوش آمدی{{ user.username }} |
-            <a class="link-light text-decoration-none" href="{% url 'logout' %}">logout</a>
+            <p class="mx-2 text-white">{{ user.username }} |
+            <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">logout</a></p>
         {% else %}
-            <a href="{% url 'login' %}" class="link-light text-decoration-none">login</a>
+            <a href="{% url 'account_login' %}" class="link-light text-decoration-none">login</a>
             <span class="text-light text-decoration-none"> | </span>
-            <a href="{% url 'signup' %}" class="link-light text-decoration-none">signup</a>
+            <a href="{% url 'account_signup' %}" class="link-light text-decoration-none">signup</a>
         {% endif %}
-
-        </div>
     </div>
 </nav>
 
+
 <div class="container">
+    {% if messages %}
+        <div class="container">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+
+        </div>
+    {% endif %}
     {% block content %}
 
     {% endblock content %}
