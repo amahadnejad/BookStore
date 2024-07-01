@@ -37,6 +37,7 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">خانه</a>
                 <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">کتاب ها</a>
                 <a class="nav-link active" href="{% url 'book_create' %}">اضافه کردن کتاب</a>
+                <a class="nav-link " href="{% url 'aboutus' %}">درباره ما</a>
             </div>
         </div>
         {% if user.is_authenticated %}
@@ -97,7 +98,7 @@
                             <a href="#!" class="text-decoration-none">Go To Cart</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-decoration-none">About Us</a>
+                            <a href="{% url 'aboutus' %}" class="text-decoration-none">About Us</a>
                         </li>
                     </ul>
                 </div>
