@@ -34,14 +34,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">خانه</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">خانه</a>
                 <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">کتاب ها</a>
                 <a class="nav-link active" href="{% url 'book_create' %}">اضافه کردن کتاب</a>
             </div>
         </div>
         {% if user.is_authenticated %}
             <p class="mx-2 text-white">{{ user.username }} |
-            <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">logout</a></p>
+                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">logout</a></p>
         {% else %}
             <a href="{% url 'account_login' %}" class="link-light text-decoration-none">login</a>
             <span class="text-light text-decoration-none"> | </span>
@@ -51,7 +51,7 @@
 </nav>
 
 
-<div class="container">
+<div class="container" dir="rtl">
     {% if messages %}
         <div class="container mt-3">
             {% for message in messages %}
@@ -60,11 +60,12 @@
 
         </div>
     {% endif %}
-    {% block content %}
 
-    {% endblock content %}
 </div>
 
+{% block content %}
+
+{% endblock content %}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
