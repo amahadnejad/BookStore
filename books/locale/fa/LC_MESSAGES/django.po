@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 16:31+0330\n"
-"PO-Revision-Date: 2024-07-02 16:31+0330\n"
+"POT-Creation-Date: 2024-07-02 16:35+0330\n"
+"PO-Revision-Date: 2024-07-02 16:35+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\books\book_create.html:5 .\templates\books\book_create.html:12
+msgid "Add New Book"
+msgstr "اضافه کردن کتاب جدید"
+
+#: .\templates\books\book_create.html:17
+msgid "publish"
+msgstr "انتشار"
+
+#: .\templates\books\book_create.html:25 .\templates\books\book_update.html:24
+msgid "help"
+msgstr "راهنما"
+
+#: .\templates\books\book_create.html:28 .\templates\books\book_update.html:27
+msgid "Enter the book information in the form and click on the save button"
+msgstr ""
+"اطلاعات کتاب را در فرم این صفحه وارد کنید و سپس بر روی دکمه ذخیره کلیک کنید."
 
 #: .\templates\books\book_delete.html:4 .\templates\books\book_delete.html:10
 #: .\templates\books\book_delete.html:15
@@ -68,12 +85,3 @@ msgstr "بعدی"
 #: .\templates\books\book_update.html:16
 msgid "Update"
 msgstr "بروزرسانی"
-
-#: .\templates\books\book_update.html:24
-msgid "help"
-msgstr "راهنما"
-
-#: .\templates\books\book_update.html:27
-msgid "Enter the book information in the form and click on the save button"
-msgstr ""
-"اطلاعات کتاب را در فرم این صفحه وارد کنید و سپس بر روی دکمه ذخیره کلیک کنید."
