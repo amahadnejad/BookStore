@@ -1,8 +1,10 @@
 {% extends "_base.html" %}
+
 {% load crispy_forms_tags %}
 {% load humanize %}
+{% load i18n %}
 
-{% block page_title %}Detail of {{ book.title }}{% endblock page_title %}
+{% block page_title %}{% trans 'book' %} {{ book.title }}{% endblock page_title %}
 {% block content %}
 
     <div class="container mt-5" dir="rtl">
@@ -21,22 +23,22 @@
                         </div>
                         <div class="col-xs-12 col-md-6 text-center text-md-end mt-md-1 mt-4">
                             <h1>{{ book.title }}</h1>
-                            <h5 class="small my-1"><span class="text-muted">نویسنده: </span>{{ book.author }}</h5>
+                            <h5 class="small my-1"><span class="text-muted">{% trans 'author' %}: </span>{{ book.author }}</h5>
                             {% if book.translator %}
-                                <h5 class="small my-1"><span class="text-muted">مترجم: </span>{{ book.translator }}</h5>
+                                <h5 class="small my-1"><span class="text-muted">{% trans 'translator' %}: </span>{{ book.translator }}</h5>
                             {% endif %}
-                            <h5 class="small my-1"><span class="text-muted">انتشارات: </span>{{ book.publisher }}</h5>
+                            <h5 class="small my-1"><span class="text-muted">{% trans 'publisher' %}: </span>{{ book.publisher }}</h5>
                             {% if book.user == user %}
-                                <a href="{% url 'book_update' book.id %}" class="btn btn-warning btn-sm">ویرایش</a>
+                                <a href="{% url 'book_update' book.id %}" class="btn btn-warning btn-sm">{% trans 'edit' %}</a>
                                 <span></span>
-                                <a href="{% url 'book_delete' book.id %}" class="btn btn-danger btn-sm">حذف</a>
+                                <a href="{% url 'book_delete' book.id %}" class="btn btn-danger btn-sm">{% trans 'delete' %}</a>
                             {% endif %}
 
 
                         </div>
                         <div class="col-xs-12 col-md-3 d-flex flex-column">
                             <h3 class="align-self-center pt-2 text-muted align-self-md-end">
-                                {{ book.price|intcomma:False }} تومان
+                                {{ book.price|intcomma:False }} {% trans 'toman' %}
                             </h3>
                         </div>
                     </div>
@@ -50,7 +52,7 @@
 
                 <div class="d-flex justify-content-center">
                     <div class="card shadow my-3 p-5 w-sm-75 w-100">
-                        <h2 class="mb-5">نظرات:</h2>
+                        <h2 class="mb-5">{% trans 'comments' %}:</h2>
                         {% if comments %}
                             {% for comment in comments %}
                                 {% if comment.is_active %}
@@ -58,9 +60,9 @@
                                         <h5 class="mb-3">{{ comment.user }}</h5>
 
                                         {% if comment.recommend %}
-                                            <p class="text-muted">{{ comment.datetime_created|date }} | این کتاب را توصیه میکنم</p>
+                                            <p class="text-muted">{{ comment.datetime_created|date }} | {% trans 'I Recommend This Book' %}</p>
                                         {% else %}
-                                            <p class="text-muted">{{ comment.datetime_created|date }} | این کتاب را توصیه نمیکنم</p>
+                                            <p class="text-muted">{{ comment.datetime_created|date }} | {% trans "I Don't Recommend This Book" %}</p>
                                         {% endif %}
                                         <p>{{ comment.text|linebreaksbr }}</p>
                                     </div>
@@ -69,7 +71,7 @@
                             {% endfor %}
                         {% else %}
                             <div class="border-bottom mb-3">
-                                <h5 class="mb-3">نظری یافت نشد</h5>
+                                <h5 class="mb-3">{% trans 'No Comment Found!' %}</h5>
                             </div>
                         {% endif %}
 
@@ -79,19 +81,19 @@
                 <div class="d-flex justify-content-center">
                     {% if user.is_authenticated %}
                         <div class="card shadow my-3 p-5 w-sm-75 w-100">
-                            <h3>نظر خود را وارد کنید:</h3>
+                            <h3>{% trans 'Enter Your Comment' %}</h3>
                             <form method="POST">
                                 {% csrf_token %}
                                 {{ comment_form|crispy }}
-                                <button type="submit" class="btn btn-primary mt-3">ارسال</button>
+                                <button type="submit" class="btn btn-primary mt-3">{% trans 'Send' %}</button>
                             </form>
                         </div>
                     {% else %}
                         <div class="card shadow my-3 p-5 w-sm-75 w-100">
-                            <h3>نظر خود را وارد کنید:</h3>
-                            <h5>برای ایجاد نظر وارد حساب کاربری خود شوید</h5>
+                            <h3>{% trans 'Enter Your Comment' %}:</h3>
+                            <h5>{% trans 'You Must Login To Create A Comment' %}</h5>
                             <a href="{% url 'account_login' %}">
-                                <button class="btn btn-primary mt-2">ورود</button>
+                                <button class="btn btn-primary mt-2">{% trans 'login' %}</button>
                             </a>
                         </div>
                     {% endif %}
