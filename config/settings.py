@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap4",
     'allauth',
     'allauth.account',
+    'rosetta',
 
     # local Apps
     'accounts.apps.AccountsConfig',
@@ -127,8 +128,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-LANGUAGE_CODE = 'fa'
+LANGUAGE_CODE = 'fa-ir'
 # LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
 
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Tehran'
