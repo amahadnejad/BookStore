@@ -1,18 +1,19 @@
 {% extends "_base.html" %}
+{% load i18n %}
 
-{% block page_title %}Delete {{ book.title }}{% endblock page_title %}
+{% block page_title %}{% trans 'Delete' %} {{ book.title }}{% endblock page_title %}
 {% block content %}
     <div class="container mt-4" dir="rtl">
         <div class="row">
             <div class="col-9">
                 <div class="card shadow my-3">
-                    <h5 class="card-header bg-success text-light px-5">حذف کتاب {{ book.title }}</h5>
+                    <h5 class="card-header bg-success text-light px-5">{% trans 'Delete' %} {{ book.title }}</h5>
                     <div class="px-5 pt-3 pb-5">
                         <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <h5>آیا از حذف این کتاب مطمئن هستید؟</h5>
-                            <button type="submit" class="btn btn-danger mt-2">حذف</button>
-                            <a href="{{ book.get_absolute_url }}" class="btn btn-info mt-2 text-light">لغو</a>
+                            <h5>{% trans 'Are you sure to delete this book?' %}</h5>
+                            <button type="submit" class="btn btn-danger mt-2">{% trans 'Delete' %}</button>
+                            <a href="{{ book.get_absolute_url }}" class="btn btn-info mt-2 text-light">{% trans 'Cancel' %}</a>
                         </form>
 
                     </div>
@@ -23,7 +24,7 @@
 
 
                 <div class="card my-3 shadow">
-                    <h5 class="card-header bg-info text-light">تصویر کتاب</h5>
+                    <h5 class="card-header bg-info text-light">{% trans 'Book Image' %}</h5>
                     <div class="image-container mx-auto">
                         <div class="col-xs-15 col-md-10 d-flex justify-content-center mt-2">
                             <div class="shadow">
