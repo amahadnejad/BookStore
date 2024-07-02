@@ -1,9 +1,10 @@
 {% extends "_base.html" %}
 
+{% load i18n %}
 {% load static %}
 {% load humanize %}
 
-{% block page_title %}Books{% endblock page_title %}
+{% block page_title %}{% trans 'Books' %}{% endblock page_title %}
 {% block content %}
 
     <div class="container mt-4">
@@ -29,12 +30,12 @@
                                 <div class="card-body">
                                     <a href="{{ book.get_absolute_url }}" class="text-decoration-none"><h3
                                             class="card-title"><strong>{{ book.title }}</strong></h3></a>
-                                    <p>قیمت: {{ book.price|intcomma:False }} تومان </p>
+                                    <p>{% trans "Price" %}: {{ book.price|intcomma:False }} {% trans 'Toman' %} </p>
                                     <p class="card-text pt-2">{{ book.description|truncatewords:30 }}</p>
-                                    <p class="text-muted">author: {{ book.author }} </p>
+                                    <p class="text-muted">{% trans 'author' %}: {{ book.author }} </p>
                                     <div class="text-start">
                                         <a href="{{ book.get_absolute_url }}">
-                                            <button class="btn btn-success">Read More</button>
+                                            <button class="btn btn-success">{% trans 'Read More' %}</button>
                                         </a>
 
                                     </div>
@@ -52,12 +53,12 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center mt-3">
             {% if page_obj.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans 'Previous' %}</a>
                 </li>
             {% endif %}
             <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
             {% if page_obj.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans 'Next' %}</a></li>
             {% endif %}
 
         </ul>
