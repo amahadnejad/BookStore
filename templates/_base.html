@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!doctype html>
 <html lang="en">
@@ -34,19 +35,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">خانه</a>
-                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">کتاب ها</a>
-                <a class="nav-link active" href="{% url 'book_create' %}">اضافه کردن کتاب</a>
-                <a class="nav-link " href="{% url 'aboutus' %}">درباره ما</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">{% trans 'home' %}</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">{% trans 'books' %}</a>
+                <a class="nav-link active" href="{% url 'book_create' %}">{% trans 'Add New Book' %}</a>
+                <a class="nav-link " href="{% url 'aboutus' %}">{% trans 'About Us' %}</a>
             </div>
         </div>
         {% if user.is_authenticated %}
             <p class="mx-2 text-white">{{ user.username }} |
-                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">logout</a></p>
+                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">{% trans 'logout' %}</a></p>
         {% else %}
-            <a href="{% url 'account_login' %}" class="link-light text-decoration-none">login</a>
+            <a href="{% url 'account_login' %}" class="link-light text-decoration-none">{% trans 'login' %}</a>
             <span class="text-light text-decoration-none"> | </span>
-            <a href="{% url 'account_signup' %}" class="link-light text-decoration-none">signup</a>
+            <a href="{% url 'account_signup' %}" class="link-light text-decoration-none">{% trans 'signup' %}</a>
         {% endif %}
     </div>
 </nav>
@@ -77,7 +78,7 @@
             <div class="row">
                 <!--Grid column-->
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">About Website</h5>
+                    <h5 class="text-uppercase">{% trans 'About Website' %}</h5>
 
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
@@ -88,17 +89,17 @@
 
                 <!--Grid column-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-0">Links</h5>
+                    <h5 class="text-uppercase mb-0">{% trans 'Links' %}</h5>
 
                     <ul class="list-unstyled mt-1">
                         <li>
-                            <a href="{% url 'book_list' %}" class="text-decoration-none">Go To Store</a>
+                            <a href="{% url 'book_list' %}" class="text-decoration-none">{% trans 'Go To Store' %}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-decoration-none">Go To Cart</a>
+                            <a href="#!" class="text-decoration-none">{% trans 'Go To Cart' %}</a>
                         </li>
                         <li>
-                            <a href="{% url 'aboutus' %}" class="text-decoration-none">About Us</a>
+                            <a href="{% url 'aboutus' %}" class="text-decoration-none">{% trans 'About Us' %}</a>
                         </li>
                     </ul>
                 </div>
@@ -110,7 +111,7 @@
 
         <!-- Copyright -->
         <div class="text-light text-center p-3 bg-success">
-            Copyright:
+            {% trans 'Copyright' %}:
             <a class="text-light text-decoration-none" href="https://github.com/amahadnezhad">amahadnezhad</a>
             | © 2024
         </div>
