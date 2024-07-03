@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 {% load humanize %}
 {% load i18n %}
+{% load jalali_tags %}
 
 {% block page_title %}{% trans 'book' %} {{ book.title }}{% endblock page_title %}
 {% block content %}
@@ -60,7 +61,7 @@
                                         <h5 class="mb-3">{{ comment.user }}</h5>
 
                                         {% if comment.recommend %}
-                                            <p class="text-muted">{{ comment.datetime_created|date }} | {% trans 'I Recommend This Book' %}</p>
+                                            <p class="text-muted">{{ comment.datetime_created }} | {% trans 'I Recommend This Book' %}</p>
                                         {% else %}
                                             <p class="text-muted">{{ comment.datetime_created|date }} | {% trans "I Don't Recommend This Book" %}</p>
                                         {% endif %}
