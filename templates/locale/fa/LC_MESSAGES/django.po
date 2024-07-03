@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 17:41+0330\n"
-"PO-Revision-Date: 2024-07-03 17:41+0330\n"
+"POT-Creation-Date: 2024-07-03 17:46+0330\n"
+"PO-Revision-Date: 2024-07-03 17:46+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -68,7 +68,6 @@ msgid "Copyright"
 msgstr "کپی رایت"
 
 #: .\account\login.html:6 .\account\login.html:14 .\account\login.html:23
-#| msgid "login"
 msgid "Login"
 msgstr "ورود"
 
@@ -81,6 +80,14 @@ msgid "or"
 msgstr "یا"
 
 #: .\account\login.html:29
-#| msgid "signup"
 msgid "Signup"
 msgstr "ثبت نام"
+
+#: .\account\logout.html:7 .\account\logout.html:15 .\account\logout.html:24
+#| msgid "logout"
+msgid "Logout"
+msgstr "خروج"
+
+#: .\account\logout.html:20
+msgid "Are You Sure?"
+msgstr "آیا مطمئن هستید؟"
