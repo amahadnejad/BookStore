@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 18:09+0330\n"
-"PO-Revision-Date: 2024-07-03 18:10+0330\n"
+"POT-Creation-Date: 2024-07-03 18:17+0330\n"
+"PO-Revision-Date: 2024-07-03 18:19+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,66 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\models.py:8
+msgid "User"
+msgstr "کاربر"
+
+#: .\models.py:9
+msgid "Title"
+msgstr "عنوان"
+
+#: .\models.py:10
+#| msgid "author"
+msgid "Author"
+msgstr "نویسنده"
+
+#: .\models.py:11
+#| msgid "translator"
+msgid "Translator"
+msgstr "مترجم"
+
+#: .\models.py:12
+#| msgid "publisher"
+msgid "Publisher"
+msgstr "انتشارات"
+
+#: .\models.py:13
+msgid "Description"
+msgstr "متن"
+
+#: .\models.py:14 .\templates\books\book_list.html:33
+msgid "Price"
+msgstr "قیمت"
+
+#: .\models.py:15
+msgid "Cover"
+msgstr "عکس کتاب"
+
+#: .\models.py:16
+msgid "Is_Active"
+msgstr "فعال"
+
+#: .\models.py:17 .\models.py:33
+msgid "Datetime_Created"
+msgstr "زمان ایجاد"
+
+#: .\models.py:18
+msgid "Datetime_Modified"
+msgstr "زمان بروزرسانی"
+
+#: .\models.py:30
+msgid "Text"
+msgstr "متن"
+
+#: .\models.py:31
+msgid "Is-Active"
+msgstr "فعال"
+
+#: .\models.py:32
+#| msgid "comments"
+msgid "Recommend"
+msgstr "توصیه"
 
 #: .\templates\books\book_create.html:5 .\templates\books\book_create.html:12
 msgid "Add New Book"
@@ -116,10 +176,6 @@ msgstr "ورود"
 #: .\templates\books\book_list.html:7
 msgid "Books"
 msgstr "کتاب ها"
-
-#: .\templates\books\book_list.html:33
-msgid "Price"
-msgstr "قیمت"
 
 #: .\templates\books\book_list.html:33
 msgid "Toman"
