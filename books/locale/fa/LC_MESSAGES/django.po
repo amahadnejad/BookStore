@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 16:43+0330\n"
-"PO-Revision-Date: 2024-07-02 16:46+0330\n"
+"POT-Creation-Date: 2024-07-03 18:09+0330\n"
+"PO-Revision-Date: 2024-07-03 18:10+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -66,7 +66,6 @@ msgid "translator"
 msgstr "مترجم"
 
 #: .\templates\books\book_detail.html:30
-#| msgid "publish"
 msgid "publisher"
 msgstr "انتشارات"
 
@@ -75,12 +74,10 @@ msgid "edit"
 msgstr "ویرایش"
 
 #: .\templates\books\book_detail.html:34
-#| msgid "Delete"
 msgid "delete"
 msgstr "حذف"
 
 #: .\templates\books\book_detail.html:41
-#| msgid "Toman"
 msgid "toman"
 msgstr "تومان"
 
@@ -144,3 +141,15 @@ msgstr "بعدی"
 #: .\templates\books\book_update.html:16
 msgid "Update"
 msgstr "بروزرسانی"
+
+#: .\views.py:43
+msgid "Book Has SuccessFully Created"
+msgstr "کتاب با موفیت ایجاد شد!"
+
+#: .\views.py:55
+msgid "Book Has SuccessFully Updated"
+msgstr "کتاب با موفقیت بروزرسانی شد!"
+
+#: .\views.py:67
+msgid "Book Has SuccessFully ِDeleted"
+msgstr "کتاب با موفقیت حذف شد!"

@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404 , render
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.utils.translation import gettext_lazy as _
 
 from .models import Book
 from .forms import BookForm, CommentForm
@@ -39,7 +40,7 @@ class BookCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView
     model = Book
     form_class = BookForm
     template_name = 'books/book_create.html'
-    success_message = 'Book Has SuccessFully Created'
+    success_message = _('Book Has SuccessFully Created')
 
 
 class BookUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, generic.UpdateView):
@@ -51,7 +52,7 @@ class BookUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixi
         obj = self.get_object()
         return obj.user == self.request.user
 
-    success_message = 'Book Has SuccessFully Updated'
+    success_message = _('Book Has SuccessFully Updated')
 
 
 class BookDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, generic.DeleteView):
@@ -63,4 +64,4 @@ class BookDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixi
         obj = self.get_object()
         return obj.user == self.request.user
 
-    success_message = 'Book Has SuccessFully ِDeleted'
+    success_message = _('Book Has SuccessFully ِDeleted')
