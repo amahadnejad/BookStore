@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 16:55+0330\n"
-"PO-Revision-Date: 2024-07-02 16:57+0330\n"
+"POT-Creation-Date: 2024-07-03 17:41+0330\n"
+"PO-Revision-Date: 2024-07-03 17:41+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -66,3 +66,21 @@ msgstr "رفتن به سبد خرید"
 #: .\_base.html:114
 msgid "Copyright"
 msgstr "کپی رایت"
+
+#: .\account\login.html:6 .\account\login.html:14 .\account\login.html:23
+#| msgid "login"
+msgid "Login"
+msgstr "ورود"
+
+#: .\account\login.html:20
+msgid "Forgot Password?"
+msgstr "فراموشی رمز عبور"
+
+#: .\account\login.html:26
+msgid "or"
+msgstr "یا"
+
+#: .\account\login.html:29
+#| msgid "signup"
+msgid "Signup"
+msgstr "ثبت نام"

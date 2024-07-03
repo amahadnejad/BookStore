@@ -1,8 +1,9 @@
 {% extends "_base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
-{% block page_title %}Login{% endblock page_title %}
+{% block page_title %}{% trans 'Login' %}{% endblock page_title %}
 {% block styles %}
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock styles %}
@@ -10,22 +11,22 @@
 {% block content %}
     <div class="d-flex justify-content-center mt-5" dir="rtl">
         <div class="col-xl-4 col-lg-4 col-md-5 col-sm-5 col-xs-6 bg-white m-3 m-sm-5 border rounded px-4 pt-4 pb-3 shadow">
-            <h1 class="text-center">login</h1>
+            <h1 class="text-center">{% trans 'Login' %}</h1>
             <form method="post">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="mt-2">
-                        <a class="text-decoration-none" href="{% url 'account_reset_password' %}">فراموشی رمز عبور</a>
+                        <a class="text-decoration-none" href="{% url 'account_reset_password' %}">{% trans 'Forgot Password?' %}</a>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success mt-3 w-100">ورود</button>
+                <button type="submit" class="btn btn-success mt-3 w-100">{% trans 'Login' %}</button>
                 <div class="line-with-middle-sep">
                   <span>
-                    یا
+                    {% trans 'or' %}
                   </span>
                 </div>
-                <a href="{% url 'account_signup' %}" class="btn btn-primary mt-2 mb-3 w-100">ثبت نام</a>
+                <a href="{% url 'account_signup' %}" class="btn btn-primary mt-2 mb-3 w-100">{% trans 'Signup' %}</a>
             </form>
         </div>
 
