@@ -3,218 +3,131 @@
 
 {% block page_title %}{% trans 'Cart' %}{% endblock page_title %}
 
-{% block styles %}
-<style>
-    .breadcrumb-area {
-        padding-top: 90px;
-        padding-bottom: 90px;
-        background-color: #f6f6f6;
-    }
-
-    .page-content-inner {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .table-content table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    .table-content table th,
-    .table-content table td {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .table-content table th.text-left,
-    .table-content table td.text-left {
-        text-align: left;
-    }
-
-    .cart-form__btn {
-        background-color: #ff0000;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-
-    .btn-fullwidth {
-        width: 100%;
-        text-align: center;
-    }
-
-    .cart-totals {
-        border: 1px solid #ddd;
-        padding: 20px;
-    }
-
-    .cart-totals h5 {
-        margin-bottom: 15px;
-    }
-
-    @media (max-width: 767.98px) {
-        .breadcrumb-area,
-        .page-content-inner {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-
-        .table-content table th,
-        .table-content table td {
-            padding: 10px;
-        }
-
-        .cart-form__btn,
-        .btn-fullwidth {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .cart-collaterals {
-            margin-top: 30px;
-        }
-    }
-</style>
-{% endblock styles %}
-
 {% block content %}
-<div dir="rtl">
-    <!-- Breadcrumb Area Start -->
-    <div class="breadcrumb-area" data-bg-color="#f6f6f6">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex justify-content-between align-items-center flex-sm-row flex-column">
+    <div dir="rtl">
+        <!-- Breadcrumb Area Start -->
+        <div class="breadcrumb-area" style="padding: 90px 0; background-color: #f6f6f6;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
                         <h1 class="page-title">سبد خرید</h1>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Breadcrumb Area End -->
+        <!-- Breadcrumb Area End -->
 
-    <!-- Main Content Wrapper Start -->
-    <div class="main-content-wrapper">
-        <div class="page-content-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mb-md--50">
-                        <form class="cart-form" action="#">
-                            <div class="row no-gutters">
-                                <div class="col-12">
-                                    <div class="table-content table-responsive">
-                                        <table class="table text-center">
-                                            <thead>
-                                                <tr>
-                                                    <th>&nbsp;</th>
-                                                    <th>عکس محصول</th>
-                                                    <th class="text-left">نام محصول</th>
-                                                    <th>قیمت</th>
-                                                    <th>مقدار</th>
-                                                    <th>مجموع</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="product-remove text-left"><a href="#"><i class="flaticon flaticon-cross"></i></a></td>
-                                                    <td class="product-thumbnail text-left">
-                                                        <img src="{% static 'assets/img/products/prod-10-70x88.jpg' %}" alt="Product Thumbnail">
-                                                    </td>
-                                                    <td class="product-name wide-column">
-                                                        <h3><a href="product-details.html">محصول شماره یک</a></h3>
-                                                    </td>
-                                                    <td class="product-price">
-                                                        <span class="product-price-wrapper">
-                                                            <span class="money">۱۴۸,۰۰۰ تومان</span>
-                                                        </span>
-                                                    </td>
-                                                    <td class="product-quantity">
-                                                        <div class="quantity">
-                                                            <input type="number" class="quantity-input" name="qty" id="qty-1" value="2" min="1">
-                                                        </div>
-                                                    </td>
-                                                    <td class="product-total-price">
-                                                        <span class="product-price-wrapper">
-                                                            <span class="money">۲۹۶,۰۰۰ تومان</span>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="product-remove text-left"><a href="#"><i class="flaticon flaticon-cross"></i></a></td>
-                                                    <td class="product-thumbnail text-left">
-                                                        <img src="{% static 'assets/img/products/prod-10-70x88.jpg' %}" alt="Product Thumbnail">
-                                                    </td>
-                                                    <td class="product-name wide-column">
-                                                        <h3><a href="product-details.html">محصول شماره دو</a></h3>
-                                                    </td>
-                                                    <td class="product-price">
-                                                        <span class="product-price-wrapper">
-                                                            <span class="money">۵۰,۰۰۰ تومان</span>
-                                                        </span>
-                                                    </td>
-                                                    <td class="product-quantity">
-                                                        <div class="quantity">
-                                                            <input type="number" class="quantity-input" name="qty" id="qty-2" value="1" min="1">
-                                                        </div>
-                                                    </td>
-                                                    <td class="product-total-price">
-                                                        <span class="product-price-wrapper">
-                                                            <span class="money">۵۰,۰۰۰ تومان</span>
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+        <!-- Main Content Wrapper Start -->
+        <div class="main-content-wrapper">
+            <div class="page-content-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mb-4 mb-lg-0 mt-1">
+                            <form class="cart-form" action="#">
+                                <div class="table-content table-responsive">
+                                    <table class="table text-center">
+                                        <thead>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>عکس محصول</th>
+                                            <th class="text-left">نام محصول</th>
+                                            <th>قیمت</th>
+                                            <th>مقدار</th>
+                                            <th>مجموع</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="product-remove text-left"><a href="#"><i
+                                                    class="flaticon flaticon-cross"></i></a></td>
+                                            <td class="product-thumbnail text-left">
+                                                <img src="{% static 'assets/img/products/prod-10-70x88.jpg' %}"
+                                                     alt="Product Thumbnail">
+                                            </td>
+                                            <td class="product-name wide-column">
+                                                <h5><a href="product-details.html">محصول شماره یک</a></h5>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="money">۱۴۸,۰۰۰ تومان</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="quantity">
+                                                    <input type="number" class="quantity-input" name="qty" id="qty-1"
+                                                           value="2" min="1">
+                                                </div>
+                                            </td>
+                                            <td class="product-total-price">
+                                                <span class="money">۲۹۶,۰۰۰ تومان</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-remove text-left"><a href="#"><i
+                                                    class="flaticon flaticon-cross"></i></a></td>
+                                            <td class="product-thumbnail text-left">
+                                                <img src="{% static 'assets/img/products/prod-10-70x88.jpg' %}"
+                                                     alt="Product Thumbnail">
+                                            </td>
+                                            <td class="product-name wide-column">
+                                                <h5><a href="product-details.html">محصول شماره دو</a></h5>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="money">۵۰,۰۰۰ تومان</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="quantity">
+                                                    <input type="number" class="quantity-input" name="qty" id="qty-2"
+                                                           value="1" min="1">
+                                                </div>
+                                            </td>
+                                            <td class="product-total-price">
+                                                <span class="money">۵۰,۰۰۰ تومان</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row no-gutters pt--20 mt-1">
+                                    <div class="col-sm-6 text-sm-right">
+                                        <button type="submit" class="btn btn-danger">خالی کردن سبد خرید</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row no-gutters border-top pt--20 mt--20">
-                                <div class="col-sm-6 text-sm-right">
-                                    <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="cart-collaterals">
-                            <div class="cart-totals">
-                                <h5 class="font-size-14 font-bold mb--15">مجموع</h5>
-                                <div class="cart-calculator">
-                                    <div class="cart-calculator__item">
-                                        <div class="cart-calculator__item--head">
+                            </form>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="cart-collaterals text-center">
+                                <div class="cart-totals">
+                                    <h3 class="font-size-14 font-weight-bold mb-3">مجموع</h3>
+                                    <hr>
+                                    <div class="cart-calculator">
+                                        <div class="d-flex justify-content-between mb-2">
                                             <span>مجموع</span>
+                                            <span class="money">۳۴۶,۰۰۰ تومان</span>
                                         </div>
-                                        <div class="cart-calculator__item--value">
-                                            <span>۳۴۶,۰۰۰ تومان</span>
-                                        </div>
-                                    </div>
-                                    <div class="cart-calculator__item order-total">
-                                        <div class="cart-calculator__item--head">
+                                        <div class="d-flex justify-content-between">
                                             <span>جمع کل</span>
-                                        </div>
-                                        <div class="cart-calculator__item--value">
-                                            <span class="product-price-wrapper">
-                                                <span class="money">۳۴۶,۰۰۰ تومان</span>
-                                            </span>
+                                            <span class="money">۳۴۶,۰۰۰ تومان</span>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="container mt-3">
+                                    <div class="row">
+                                        <div class="col text-center"> <!-- Use text-center class to center content -->
+                                            <button type="submit" class="btn btn-success ">ثبت سفارش</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">ثبت سفارش</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Main Content Wrapper End -->
     </div>
-    <!-- Main Content Wrapper End -->
-</div>
 
-<!-- ************************* JS Files ************************* -->
-<script src="{% static 'js/vendor.js' %}"></script>
-<script src="{% static 'js/main.js' %}"></script>
-
+    <!-- ************************* JS Files ************************* -->
+    <script src="{% static 'js/vendor.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 {% endblock content %}
