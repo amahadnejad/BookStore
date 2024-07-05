@@ -1,3 +1,5 @@
+from books.models import Book
+
 
 class Cart:
     def __init__(self, request):
@@ -39,6 +41,19 @@ class Cart:
         if book_id in self.cart:
             del self.cart['book_id']
             self.save()
+
+    def __iter__(self):
+        book_ids = self.cart.keys()
+
+        books = Book.objects.filter(id__in=book_ids)
+
+        cart = self.cart.copy()
+
+        for book in books:
+            cart[str(book.id)]['book_obj'] = book
+
+        for item in cart.values():
+            yield item
 
     def save(self):
         """
