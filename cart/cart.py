@@ -57,6 +57,10 @@ class Cart:
     def __len__(self):
         return len(self.cart.keys())
 
+    def clear(self):
+        del self.session['cart']
+        self.save()
+
     def save(self):
         """
             Mark Sessions As Modified To Save Changes
