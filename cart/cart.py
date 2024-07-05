@@ -61,6 +61,12 @@ class Cart:
         del self.session['cart']
         self.save()
 
+    def get_total_price(self):
+        book_ids = self.cart.keys()
+        books = Book.objects.filter(id__in=book_ids)
+
+        return sum(book.price for book in books)
+
     def save(self):
         """
             Mark Sessions As Modified To Save Changes
