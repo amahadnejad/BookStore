@@ -44,7 +44,6 @@ class Cart:
 
     def __iter__(self):
         book_ids = self.cart.keys()
-
         books = Book.objects.filter(id__in=book_ids)
 
         cart = self.cart.copy()
@@ -54,6 +53,9 @@ class Cart:
 
         for item in cart.values():
             yield item
+
+    def __len__(self):
+        return len(self.cart.keys())
 
     def save(self):
         """
