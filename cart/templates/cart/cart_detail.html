@@ -37,52 +37,33 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td class="product-remove text-left"><a href="#"><i
-                                                    class="flaticon flaticon-cross"></i></a></td>
-                                            <td class="product-thumbnail text-left">
-                                                <img src="{% static 'assets/img/products/prod-10-70x88.jpg' %}"
-                                                     alt="Product Thumbnail">
-                                            </td>
-                                            <td class="product-name wide-column">
-                                                <h5><a href="product-details.html">محصول شماره یک</a></h5>
-                                            </td>
-                                            <td class="product-price">
-                                                <span class="money">۱۴۸,۰۰۰ تومان</span>
-                                            </td>
-                                            <td class="product-quantity">
-                                                <div class="quantity">
-                                                    <input type="number" class="quantity-input" name="qty" id="qty-1"
-                                                           value="2" min="1">
-                                                </div>
-                                            </td>
-                                            <td class="product-total-price">
-                                                <span class="money">۲۹۶,۰۰۰ تومان</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-remove text-left"><a href="#"><i
-                                                    class="flaticon flaticon-cross"></i></a></td>
-                                            <td class="product-thumbnail text-left">
-                                                <img src="{% static 'assets/img/products/prod-10-70x88.jpg' %}"
-                                                     alt="Product Thumbnail">
-                                            </td>
-                                            <td class="product-name wide-column">
-                                                <h5><a href="product-details.html">محصول شماره دو</a></h5>
-                                            </td>
-                                            <td class="product-price">
-                                                <span class="money">۵۰,۰۰۰ تومان</span>
-                                            </td>
-                                            <td class="product-quantity">
-                                                <div class="quantity">
-                                                    <input type="number" class="quantity-input" name="qty" id="qty-2"
-                                                           value="1" min="1">
-                                                </div>
-                                            </td>
-                                            <td class="product-total-price">
-                                                <span class="money">۵۰,۰۰۰ تومان</span>
-                                            </td>
-                                        </tr>
+                                        {% for item in cart %}
+                                            <tr>
+                                                <td class="product-remove text-left"><a href="#"><i
+                                                        class="flaticon flaticon-cross"></i></a></td>
+                                                <td class="product-thumbnail text-left">
+                                                    <img src=""
+                                                         alt="Product Thumbnail">
+                                                </td>
+                                                <td class="product-name wide-column">
+                                                    <h5><a href="product-details.html">{{ item.book_obj.title }}</a></h5>
+                                                </td>
+                                                <td class="product-price">
+                                                    <span class="money">۱۴۸,۰۰۰ تومان</span>
+                                                </td>
+                                                <td class="product-quantity">
+                                                    <div class="quantity">
+                                                        <input type="number" class="quantity-input" name="qty"
+                                                               id="qty-1"
+                                                               value="2" min="1">
+                                                    </div>
+                                                </td>
+                                                <td class="product-total-price">
+                                                    <span class="money">۲۹۶,۰۰۰ تومان</span>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+
                                         </tbody>
                                     </table>
                                 </div>
