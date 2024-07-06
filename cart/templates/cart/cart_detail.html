@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 {% load static crispy_forms_tags i18n %}
+{% load i18n %}
 
 {% block page_title %}{% trans 'Cart' %}{% endblock page_title %}
 
@@ -10,7 +11,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="page-title">سبد خرید</h1>
+                        <h1 class="page-title">{% trans 'Cart' %}</h1>
                     </div>
                 </div>
             </div>
@@ -28,11 +29,11 @@
                                     <thead>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <th>عکس محصول</th>
-                                        <th class="text-left">نام محصول</th>
-                                        <th>قیمت</th>
-                                        <th>مقدار</th>
-                                        <th>مجموع</th>
+                                        <th>{% trans 'Product Image' %}</th>
+                                        <th class="text-left">{% trans 'Product Name' %}</th>
+                                        <th>{% trans 'Price' %}</th>
+                                        <th>{% trans 'Qty' %}</th>
+                                        <th>{% trans 'Total' %}</th>
                                     </tr>
                                     </thead>
 
@@ -62,7 +63,7 @@
                                                     </h5>
                                                 </td>
                                                 <td class="product-price">
-                                                    <span class="money">{{ item.book_obj.price }} تومان</span>
+                                                    <span class="money">{{ item.book_obj.price }} {% trans 'Toman' %}</span>
                                                 </td>
                                                 <td class="product-quantity">
                                                     <form class="d-flex"
@@ -91,13 +92,13 @@
                                                     </form>
                                                 </td>
                                                 <td class="product-total-price">
-                                                    <span class="money">{{ item.total_price }} تومان</span>
+                                                    <span class="money">{{ item.total_price }} {% trans 'Toman' %}</span>
                                                 </td>
                                             </tr>
                                         {% endfor %}
                                     {% else %}
                                         <td>
-                                            <p>Cart Is Empty! Add Some Products</p>
+                                            <p>{% trans 'Cart Is Empty! Add Some Products' %}</p>
                                         </td>
                                     {% endif %}
                                     </tbody>
@@ -118,14 +119,14 @@
                         </div>
 
                         <div class="col-lg-4">
-                            <div class="cart-collaterals text-center">
+                            <div class="cart-collaterals text-center mt-3">
                                 <div class="cart-totals">
-                                    <h3 class="font-size-14 font-weight-bold mb-3">مجموع</h3>
+                                    <h3 class="font-size-14 font-weight-bold mb-3">{% trans 'Total' %}</h3>
                                     <hr>
                                     <div class="cart-calculator">
                                         <div class="d-flex justify-content-between mb-2">
-                                            <span>مجموع</span>
-                                            <span class="money">{{ cart.get_total_price }} تومان</span>
+                                            <span>{% trans 'Total' %}</span>
+                                            <span class="money">{{ cart.get_total_price }} {% trans 'Toman' %}</span>
                                         </div>
 
                                     </div>
@@ -133,7 +134,7 @@
                                 <div class="container mt-3">
                                     <div class="row">
                                         <div class="col text-center"> <!-- Use text-center class to center content -->
-                                            <button type="submit" class="btn btn-success ">ثبت سفارش</button>
+                                            <button type="submit" class="btn btn-success ">{% trans 'Checkout' %}</button>
                                         </div>
                                     </div>
                                 </div>
