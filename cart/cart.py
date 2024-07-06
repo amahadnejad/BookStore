@@ -1,3 +1,5 @@
+from django.contrib import messages
+
 from books.models import Book
 
 
@@ -32,6 +34,7 @@ class Cart:
         else:
             self.cart[book_id]['quantity'] += quantity
 
+        messages.success(self.request, 'Book Successfully Added To Cart')
         self.save()
 
     def remove(self, book):
@@ -42,6 +45,7 @@ class Cart:
 
         if book_id in self.cart:
             del self.cart[book_id]
+            messages.success(self.request, 'Book Successfully Removed From Cart')
             self.save()
 
     def __iter__(self):
@@ -62,6 +66,7 @@ class Cart:
 
     def clear(self):
         del self.session['cart']
+        messages.success(self.request, 'All Product Has Successfully Removed!')
         self.save()
 
     def get_total_price(self):

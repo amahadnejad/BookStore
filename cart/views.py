@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-
+from django.views.decorators.http import require_POST
 from .cart import Cart
 from books.models import Book
 from .forms import AddToCartBookForm
@@ -19,6 +19,7 @@ def cart_detail_view(request):
     })
 
 
+@require_POST
 def add_to_cart_view(request, book_id):
     cart = Cart(request)
     book = get_object_or_404(Book, id=book_id)
@@ -37,4 +38,15 @@ def remove_from_cart(request, book_id):
     book = get_object_or_404(Book, id=book_id)
     cart.remove(book)
 
+    return redirect('cart:cart_detail')
+
+
+def clear_cart(request):
+    cart = Cart(request)
+
+    if len(cart):
+        cart.clear()
+        # messages.success(request, _('All products successfully removed from your cart'))
+    # else:
+        # messages.warning(request, _('Your cart is already empty'))
     return redirect('cart:cart_detail')
