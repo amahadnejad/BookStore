@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 17:57+0330\n"
-"PO-Revision-Date: 2024-07-03 18:02+0330\n"
+"POT-Creation-Date: 2024-07-07 00:51+0330\n"
+"PO-Revision-Date: 2024-07-07 00:51+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,51 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\_base.html:38
+#: .\_base.html:40
 msgid "home"
 msgstr "خانه"
 
-#: .\_base.html:39
+#: .\_base.html:41
 msgid "books"
 msgstr "کتاب ها"
 
-#: .\_base.html:40
+#: .\_base.html:42
 msgid "Add New Book"
 msgstr "کتاب جدید"
 
-#: .\_base.html:41 .\_base.html:102
+#: .\_base.html:43
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: .\_base.html:44 .\_base.html:105
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\_base.html:46
+#: .\_base.html:49
 msgid "logout"
 msgstr "خروج"
 
-#: .\_base.html:48 .\account\password_reset_form.html:26
+#: .\_base.html:51 .\account\password_reset_form.html:26
 msgid "login"
 msgstr "ورود"
 
-#: .\_base.html:50
+#: .\_base.html:53
 msgid "signup"
 msgstr "ثبت نام"
 
-#: .\_base.html:81
+#: .\_base.html:84
 msgid "About Website"
 msgstr "درباره وبسایت"
 
-#: .\_base.html:92
+#: .\_base.html:95
 msgid "Links"
 msgstr "پیوند ها"
 
-#: .\_base.html:96
+#: .\_base.html:99
 msgid "Go To Store"
 msgstr "رفتن به فروشگاه"
 
-#: .\_base.html:99
+#: .\_base.html:102
 msgid "Go To Cart"
 msgstr "رفتن به سبد خرید"
 
-#: .\_base.html:114
+#: .\_base.html:117
 msgid "Copyright"
 msgstr "کپی رایت"
 
@@ -102,12 +106,10 @@ msgid "Password Has Been Changed Successfully!"
 msgstr "رمز عبور با موفقیت تغییر پیدا کرد!"
 
 #: .\account\password_change_done.html:8
-#| msgid "Go To Store"
 msgid "Go To Login"
 msgstr "رفتن به صفحه ورود"
 
 #: .\account\password_change_form.html:5
-#| msgid "Forgot Password?"
 msgid "Change Password"
 msgstr "تغییر رمز عبور"
 
@@ -125,12 +127,10 @@ msgid "Your new Password Changed Successfully."
 msgstr "رمز با موفقیت تغییر پیدا کرد."
 
 #: .\account\password_reset_confirm.html:5
-#| msgid "Forgot Password?"
 msgid "Set New Password"
 msgstr "تنظیم رمز عبور جدید"
 
 #: .\account\password_reset_confirm.html:9
-#| msgid "Forgot Password?"
 msgid "New Password!"
 msgstr "رمز عبور جدید"
 
