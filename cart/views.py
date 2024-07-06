@@ -24,4 +24,3 @@ def add_to_cart_view(request, book_id):
         cart.add(book, quantity)
 
     return redirect('cart:cart_detail')
-

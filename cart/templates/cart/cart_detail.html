@@ -43,23 +43,26 @@
                                                         class="flaticon flaticon-cross"></i></a></td>
                                                 <td class="product-thumbnail text-left">
                                                     <img src=""
-                                                         alt="Product Thumbnail">
+                                                         alt="#">
                                                 </td>
                                                 <td class="product-name wide-column">
                                                     <h5><a href="product-details.html">{{ item.book_obj.title }}</a></h5>
                                                 </td>
                                                 <td class="product-price">
-                                                    <span class="money">۱۴۸,۰۰۰ تومان</span>
+                                                    <span class="money">{{ item.book_obj.price }} تومان</span>
                                                 </td>
                                                 <td class="product-quantity">
                                                     <div class="quantity">
-                                                        <input type="number" class="quantity-input" name="qty"
+                                                        <input type="number"
+                                                               class="quantity-input"
+                                                               name="qty"
                                                                id="qty-1"
-                                                               value="2" min="1">
+                                                               value="{{ item.quantity }}"
+                                                               min="1">
                                                     </div>
                                                 </td>
                                                 <td class="product-total-price">
-                                                    <span class="money">۲۹۶,۰۰۰ تومان</span>
+                                                    <span class="money">{{ item.book_obj.price }} تومان</span>
                                                 </td>
                                             </tr>
                                         {% endfor %}

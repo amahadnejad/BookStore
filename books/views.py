@@ -7,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 from .models import Book
 from .forms import BookForm, CommentForm
+from cart.forms import AddToCartBookForm
 
 
 class BookListView(generic.ListView):
@@ -33,6 +34,7 @@ def book_detail_view(request, pk):
     return render(request, 'books/book_detail.html', {'book': book,
                                                       'comments': book_comments,
                                                       'comment_form': CommentForm,
+                                                      'add_to_cart_form': AddToCartBookForm,
                                                       })
 
 
