@@ -1,6 +1,7 @@
 {% extends "_base.html" %}
 {% load static crispy_forms_tags i18n %}
 {% load i18n %}
+{% load humanize %}
 
 {% block page_title %}{% trans 'Cart' %}{% endblock page_title %}
 
@@ -63,7 +64,7 @@
                                                     </h5>
                                                 </td>
                                                 <td class="product-price">
-                                                    <span class="money">{{ item.book_obj.price }} {% trans 'Toman' %}</span>
+                                                    <span class="money">{{ item.book_obj.price|intcomma:False }} {% trans 'Toman' %}</span>
                                                 </td>
                                                 <td class="product-quantity">
                                                     <form class="d-flex"
@@ -92,7 +93,7 @@
                                                     </form>
                                                 </td>
                                                 <td class="product-total-price">
-                                                    <span class="money">{{ item.total_price }} {% trans 'Toman' %}</span>
+                                                    <span class="money">{{ item.total_price|intcomma:False }} {% trans 'Toman' %}</span>
                                                 </td>
                                             </tr>
                                         {% endfor %}
@@ -106,16 +107,14 @@
                             </div>
                             <div class="row no-gutters pt--20 mt-1">
                                 <div class="col-sm-6 text-sm-right">
-                                     <form action="{% url 'cart:cart_clear' %}" method="POST">
-                                            {% csrf_token %}
-                                            <button type="submit" class="btn btn-danger">
-                                                {% translate 'Empty Cart' %}
-                                            </button>
-                                        </form>
+                                    <form action="{% url 'cart:cart_clear' %}" method="POST">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger">
+                                            {% translate 'Empty Cart' %}
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
-
-
                         </div>
 
                         <div class="col-lg-4">
@@ -126,7 +125,7 @@
                                     <div class="cart-calculator">
                                         <div class="d-flex justify-content-between mb-2">
                                             <span>{% trans 'Total' %}</span>
-                                            <span class="money">{{ cart.get_total_price }} {% trans 'Toman' %}</span>
+                                            <span class="money">{{ cart.get_total_price|intcomma:False }} {% trans 'Toman' %}</span>
                                         </div>
 
                                     </div>
@@ -134,7 +133,8 @@
                                 <div class="container mt-3">
                                     <div class="row">
                                         <div class="col text-center"> <!-- Use text-center class to center content -->
-                                            <button type="submit" class="btn btn-success ">{% trans 'Checkout' %}</button>
+                                            <button type="submit"
+                                                    class="btn btn-success ">{% trans 'Checkout' %}</button>
                                         </div>
                                     </div>
                                 </div>
