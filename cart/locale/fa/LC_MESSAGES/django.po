@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-07 00:59+0330\n"
-"PO-Revision-Date: 2024-07-07 01:00+0330\n"
+"POT-Creation-Date: 2024-07-07 14:54+0330\n"
+"PO-Revision-Date: 2024-07-07 14:55+0330\n"
 "Last-Translator:   <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,44 +19,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\templates\cart\cart_detail.html:5 .\templates\cart\cart_detail.html:14
+#: .\cart.py:38
+msgid "Book Successfully Added To Cart"
+msgstr "کتاب با موفقیت به سبد خرید اضافه شد!"
+
+#: .\cart.py:49
+msgid "Book Successfully Removed From Cart"
+msgstr "کتاب با موفقیت از سبد خرید حذف شد!"
+
+#: .\templates\cart\cart_detail.html:6 .\templates\cart\cart_detail.html:15
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\templates\cart\cart_detail.html:32
+#: .\templates\cart\cart_detail.html:33
 msgid "Product Image"
 msgstr "عکس محصول"
 
-#: .\templates\cart\cart_detail.html:33
+#: .\templates\cart\cart_detail.html:34
 msgid "Product Name"
 msgstr "عنوان محصول"
 
-#: .\templates\cart\cart_detail.html:34
+#: .\templates\cart\cart_detail.html:35
 msgid "Price"
 msgstr "قیمت"
 
-#: .\templates\cart\cart_detail.html:35
+#: .\templates\cart\cart_detail.html:36
 msgid "Qty"
 msgstr "تعداد"
 
-#: .\templates\cart\cart_detail.html:36 .\templates\cart\cart_detail.html:124
-#: .\templates\cart\cart_detail.html:128
+#: .\templates\cart\cart_detail.html:37 .\templates\cart\cart_detail.html:123
+#: .\templates\cart\cart_detail.html:127
 msgid "Total"
 msgstr "مجموع"
 
-#: .\templates\cart\cart_detail.html:66 .\templates\cart\cart_detail.html:95
-#: .\templates\cart\cart_detail.html:129
+#: .\templates\cart\cart_detail.html:67 .\templates\cart\cart_detail.html:96
+#: .\templates\cart\cart_detail.html:128
 msgid "Toman"
 msgstr "تومان"
 
-#: .\templates\cart\cart_detail.html:101
+#: .\templates\cart\cart_detail.html:102
 msgid "Cart Is Empty! Add Some Products"
 msgstr "سبد خرید خالی است! تعدادی محصول اضافه کنید."
 
-#: .\templates\cart\cart_detail.html:112
+#: .\templates\cart\cart_detail.html:113
 msgid "Empty Cart"
 msgstr "خالی کردن سبد خرید"
 
 #: .\templates\cart\cart_detail.html:137
 msgid "Checkout"
 msgstr "ثبت سفارش"
+
+#: .\views.py:52
+msgid "All products successfully removed from your cart"
+msgstr "تمامی محصولات با موفقیت از سبد خرید حذف شدند!"
+
+#: .\views.py:54
+msgid "Your cart is already empty"
+msgstr "سبد خرید شما خالی می باشد!"
