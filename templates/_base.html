@@ -46,7 +46,8 @@
         </div>
         {% if user.is_authenticated %}
             <p class="mx-2 text-white">{{ user.username }} |
-                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">{% trans 'logout' %}</a></p>
+                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">{% trans 'logout' %}</a>
+            </p>
         {% else %}
             <a href="{% url 'account_login' %}" class="link-light text-decoration-none">{% trans 'login' %}</a>
             <span class="text-light text-decoration-none"> | </span>
@@ -84,9 +85,13 @@
                     <h5 class="text-uppercase">{% trans 'About Website' %}</h5>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                        {% blocktrans %}
+                        The bookstore project is an online platform for selling various printed and electronic books,
+                        aimed at
+                        providing easy and quick access to books for reading enthusiasts. This bookstore offers a wide
+                        collection of books in different categories, from literature and science to children's books and
+                        contemporary novels, allowing users to easily find and purchase their desired books.
+                        {% endblocktrans %}
                     </p>
                 </div>
 
@@ -99,7 +104,8 @@
                             <a href="{% url 'book_list' %}" class="text-decoration-none">{% trans 'Go To Store' %}</a>
                         </li>
                         <li>
-                            <a href="{% url 'cart:cart_detail' %}" class="text-decoration-none">{% trans 'Go To Cart' %}</a>
+                            <a href="{% url 'cart:cart_detail' %}"
+                               class="text-decoration-none">{% trans 'Go To Cart' %}</a>
                         </li>
                         <li>
                             <a href="{% url 'aboutus' %}" class="text-decoration-none">{% trans 'About Us' %}</a>
