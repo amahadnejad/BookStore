@@ -13,7 +13,7 @@ class Order(models.Model):
     city = models.CharField(max_length=100, verbose_name='City')
     address = models.CharField(max_length=700, verbose_name='Address')
 
-    order_notes = models.CharField(max_length=700, verbose_name='Notes')
+    order_notes = models.CharField(max_length=700, verbose_name='Notes', blank=True)
     is_paid = models.BooleanField(default=False)
 
     datetime_created = models.DateTimeField(auto_now_add=True)
