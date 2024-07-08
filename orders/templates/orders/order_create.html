@@ -21,50 +21,8 @@
                             </div>
                             <div class="checkout-form">
                                 <form action="#" class="form form--checkout">
-                                    <div class="row mb-3">
-                                        <div class="form-group col-md-6 mb-sm-3">
-                                            <label for="billing_fname" class="form-label">نام <span
-                                                    class="required">*</span></label>
-                                            <input type="text" name="billing_fname" id="billing_fname"
-                                                   class="form-control">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="billing_lname" class="form-label">نام خانوادگی <span
-                                                    class="required">*</span></label>
-                                            <input type="text" name="billing_lname" id="billing_lname"
-                                                   class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="form-group col-12">
-                                            <label for="billing_company" class="form-label">آدرس</label>
-                                            <input type="text" name="billing_company" id="billing_company"
-                                                   class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="form-group col-12">
-                                            <label for="billing_phone" class="form-label">شماره همراه <span
-                                                    class="required">*</span></label>
-                                            <input type="text" name="billing_phone" id="billing_phone"
-                                                   class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="form-group col-12">
-                                            <label for="billing_email" class="form-label">ایمیل <span
-                                                    class="required">*</span></label>
-                                            <input type="email" name="billing_email" id="billing_email"
-                                                   class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-12">
-                                            <label for="orderNotes" class="form-label">یادداشت شما</label>
-                                            <textarea class="form-control" id="orderNotes" name="orderNotes"
-                                                      placeholder="اگر یادداشتی دارید در اینجا وارد کنید. در غیر این صورت این مکان را خالی بگذارید"></textarea>
-                                        </div>
-                                    </div>
+                                    {% csrf_token %}
+                                    {{ form|crispy }}
                                 </form>
                             </div>
                         </div>
@@ -84,7 +42,8 @@
                                         <tbody>
                                         {% for item in cart %}
                                             <tr>
-                                                <th>{{ item.book_obj.title }}<strong><span> &#10006;</span>{{ item.quantity }}</strong></th>
+                                                <th>{{ item.book_obj.title }}<strong><span> &#10006;</span>{{ item.quantity }}
+                                                </strong></th>
                                                 <td class="text-end">{{ item.book_obj.price }} تومان</td>
                                             </tr>
                                         {% endfor %}
