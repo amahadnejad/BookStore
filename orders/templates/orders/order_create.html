@@ -19,7 +19,7 @@
                             <div class="checkout-title mt-1">
                                 <h2>جزئیات سفارش</h2>
                             </div>
-                            <div class="checkout-form">
+                            <div class="checkout-form mt-3">
                                 <form action="#" class="form form--checkout">
                                     {% csrf_token %}
                                     {{ form|crispy }}
@@ -31,7 +31,7 @@
                                 <div class="checkout-title mt-1">
                                     <h2>سفارش شما</h2>
                                 </div>
-                                <div class="table-responsive mb-3">
+                                <div class="table-responsive mt-3">
                                     <table class="table order-table order-table-2">
                                         <thead>
                                         <tr>
@@ -42,7 +42,7 @@
                                         <tbody>
                                         {% for item in cart %}
                                             <tr>
-                                                <th>{{ item.book_obj.title }}<strong><span> &#10006;</span>{{ item.quantity }}
+                                                <th>{{ item.book_obj.title }}<strong><span> &#10005;</span>{{ item.quantity }}
                                                 </strong></th>
                                                 <td class="text-end">{{ item.book_obj.price }} تومان</td>
                                             </tr>
@@ -65,10 +65,14 @@
                                             <div class="form-check">
                                                 <input type="radio" class="form-check-input" value="bank"
                                                        name="payment-method" id="bank" checked>
-                                                <label class="form-check-label" for="cheque">درگاه آنلاین زرین
-                                                    پال</label>
+                                                <label class="form-check-label" for="cheque">درگاه آنلاین پیش
+                                                    فرض</label>
+
                                             </div>
+
                                         </div>
+                                        <button type="submit" class="btn btn-success mt-3">ثبت سفارش</button>
+
                                     </form>
                                 </div>
                             </div>
