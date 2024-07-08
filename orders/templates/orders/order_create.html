@@ -17,27 +17,27 @@
                         <!-- Checkout Area Start -->
                         <div class="col-lg-6">
                             <div class="checkout-title mt-1">
-                                <h2>جزئیات سفارش</h2>
+                                <h2>{% trans 'Checkout Detail' %}</h2>
                             </div>
                             <div class="checkout-form mt-3">
                                 <form action="#" class="form form--checkout" method="POST">
                                     {% csrf_token %}
                                     {{ form|crispy }}
-                                    <button type="submit" class="btn btn-success mt-3">ثبت سفارش</button>
+                                    <button type="submit" class="btn btn-success mt-3">{% trans 'Order' %}</button>
                                 </form>
                             </div>
                         </div>
                         <div class="col-xl-5 offset-xl-1 col-lg-6 mt-md-4">
                             <div class="order-details">
                                 <div class="checkout-title mt-1">
-                                    <h2>سفارش شما</h2>
+                                    <h2>{% trans 'Your Order' %}</h2>
                                 </div>
                                 <div class="table-responsive mt-3">
                                     <table class="table order-table order-table-2">
                                         <thead>
                                         <tr>
-                                            <th>محصول</th>
-                                            <th class="text-end">قیمت نهایی</th>
+                                            <th>{% trans 'Product' %}</th>
+                                            <th class="text-end">{% trans 'Final Price' %}</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -45,7 +45,7 @@
                                             <tr>
                                                 <th>{{ item.book_obj.title }}<strong><span> &#10005;</span>{{ item.quantity }}
                                                 </strong></th>
-                                                <td class="text-end">{{ item.book_obj.price }} تومان</td>
+                                                <td class="text-end">{{ item.book_obj.price }} {% trans 'Toman' %}</td>
                                             </tr>
                                         {% endfor %}
 
@@ -53,21 +53,20 @@
                                         </tbody>
                                         <tfoot>
                                         <tr class="cart-subtotal">
-                                            <th>مجموع</th>
-                                            <td class="text-end">{{ cart.get_total_price }} تومان</td>
+                                            <th>{% trans 'Total' %}</th>
+                                            <td class="text-end">{{ cart.get_total_price }} {% trans 'Toman' %}</td>
                                         </tr>
                                         </tfoot>
                                     </table>
                                 </div>
                                 <div class="checkout-payment">
-                                    <h2 class="py-5">روش پرداخت</h2>
+                                    <h2 class="py-5">{% trans 'Payment Method' %}</h2>
                                     <form action="#" class="payment-form">
                                         <div class="payment-group mb-3">
                                             <div class="form-check">
                                                 <input type="radio" class="form-check-input" value="bank"
                                                        name="payment-method" id="bank" checked>
-                                                <label class="form-check-label" for="cheque">درگاه آنلاین پیش
-                                                    فرض</label>
+                                                <label class="form-check-label" for="cheque">{% trans 'Default online portal' %}</label>
 
                                             </div>
                                         </div>
