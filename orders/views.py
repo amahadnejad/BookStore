@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils.translation import gettext as _
 
 from cart.cart import Cart
 from .forms import OrderForm
-from .models import OrderItem
+from .models import OrderItem, Order
 
 
 @login_required
@@ -46,4 +46,15 @@ def order_create_view(request):
 
     return render(request, 'orders/order_create.html', {
         'form': order_form,
+    })
+
+
+@login_required
+def order_receipt_view(request, order_id):
+    order = get_object_or_404(Order, id=order_id, user=request.user)
+    order_items = OrderItem.objects.filter(order=order)
+
+    return render(request, 'orders/order_receipt.html', {
+        'order': order,
+        'order_items': order_items,
     })
