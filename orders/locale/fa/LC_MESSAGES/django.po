@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-13 01:32+0330\n"
-"PO-Revision-Date: 2024-07-13 01:35+0330\n"
+"PO-Revision-Date: 2024-07-13 01:45+0330\n"
 "Last-Translator: جلیل جعفری <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -142,7 +142,7 @@ msgstr "تعداد"
 
 #: .\templates\orders\order_receipt.html:67
 msgid "Unit Price"
-msgstr "قیمت نهایی"
+msgstr "قیمت واحد"
 
 #: .\templates\orders\order_receipt.html:68
 msgid "Total Price"
