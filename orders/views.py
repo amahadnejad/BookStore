@@ -54,7 +54,10 @@ def order_receipt_view(request, order_id):
     order = get_object_or_404(Order, id=order_id, user=request.user)
     order_items = OrderItem.objects.filter(order=order)
 
+
+
     return render(request, 'orders/order_receipt.html', {
         'order': order,
         'order_items': order_items,
+        'total_price': total_price,
     })

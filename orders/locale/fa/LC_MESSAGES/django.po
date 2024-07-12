@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 18:48+0330\n"
-"PO-Revision-Date: 2024-07-08 18:50+0330\n"
-"Last-Translator: سارا جعفری <amir@amir.com>\n"
+"POT-Creation-Date: 2024-07-13 01:32+0330\n"
+"PO-Revision-Date: 2024-07-13 01:35+0330\n"
+"Last-Translator: جلیل جعفری <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -28,8 +28,9 @@ msgid "Checkout Detail"
 msgstr "جزئیات سفارش"
 
 #: .\templates\orders\order_create.html:26
+#: .\templates\orders\order_receipt.html:18
 msgid "Order"
-msgstr "ثبت سفارش"
+msgstr "سفارش"
 
 #: .\templates\orders\order_create.html:33
 msgid "Your Order"
@@ -49,6 +50,7 @@ msgid "Toman"
 msgstr "تومان"
 
 #: .\templates\orders\order_create.html:56
+#: .\templates\orders\order_receipt.html:86
 msgid "Total"
 msgstr "مجموع"
 
@@ -59,6 +61,92 @@ msgstr "روش پرداخت"
 #: .\templates\orders\order_create.html:69
 msgid "Default online portal"
 msgstr "درگاه پرداخت پیش فرض"
+
+#: .\templates\orders\order_receipt.html:7
+msgid "Order Receipt"
+msgstr "فاکتور سفارش"
+
+#: .\templates\orders\order_receipt.html:15
+msgid "Purchase Order"
+msgstr "فاکتور خرید"
+
+#: .\templates\orders\order_receipt.html:19
+msgid "Date"
+msgstr "تاریخ"
+
+#: .\templates\orders\order_receipt.html:30
+msgid "Company Information"
+msgstr "اطلاعات فروشگاه"
+
+#: .\templates\orders\order_receipt.html:32
+msgid "Company Name"
+msgstr "نام فروشگاه"
+
+#: .\templates\orders\order_receipt.html:32
+msgid "Ketab No"
+msgstr "کتاب نو"
+
+#: .\templates\orders\order_receipt.html:33
+#: .\templates\orders\order_receipt.html:44
+msgid "Address"
+msgstr "آدرس"
+
+#: .\templates\orders\order_receipt.html:33
+msgid "Iran, Tehran"
+msgstr "ایران ، تهران"
+
+#: .\templates\orders\order_receipt.html:34
+msgid "Email"
+msgstr "ایمیل"
+
+#: .\templates\orders\order_receipt.html:34
+msgid "info@ketabno.com"
+msgstr ""
+
+#: .\templates\orders\order_receipt.html:35
+#: .\templates\orders\order_receipt.html:45
+msgid "Phone"
+msgstr "شماره تماس"
+
+#: .\templates\orders\order_receipt.html:39
+msgid "Customer Information"
+msgstr "اطلاعات مشتری"
+
+#: .\templates\orders\order_receipt.html:41
+msgid "Customer Name"
+msgstr "نام مشتری"
+
+#: .\templates\orders\order_receipt.html:42
+msgid "Country"
+msgstr "کشور"
+
+#: .\templates\orders\order_receipt.html:43
+msgid "City"
+msgstr "شهر"
+
+#: .\templates\orders\order_receipt.html:47
+msgid "Note"
+msgstr "یادداشت"
+
+#: .\templates\orders\order_receipt.html:60
+msgid "Order Details"
+msgstr "جزئیات سفارش"
+
+#: .\templates\orders\order_receipt.html:65
+msgid "Product Name"
+msgstr "نام محصول"
+
+#: .\templates\orders\order_receipt.html:66
+msgid "Quantity"
+msgstr "تعداد"
+
+#: .\templates\orders\order_receipt.html:67
+msgid "Unit Price"
+msgstr "قیمت نهایی"
+
+#: .\templates\orders\order_receipt.html:68
+msgid "Total Price"
+msgstr "مجموع "
 
 #: .\views.py:17
 msgid "You can not proceed to checkout page because your cart is empty."
