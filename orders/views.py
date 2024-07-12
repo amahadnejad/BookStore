@@ -42,7 +42,7 @@ def order_create_view(request):
 
             request.session['order_id'] = order_obj.id
             messages.success(request, _("Your Order Successfully Placed"))
-            return redirect('book_list')
+            return redirect('order_receipt', order_obj.id)
 
     return render(request, 'orders/order_create.html', {
         'form': order_form,
