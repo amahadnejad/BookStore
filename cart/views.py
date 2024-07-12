@@ -12,7 +12,7 @@ def cart_detail_view(request):
     cart = Cart(request)
 
     for item in cart:
-        item['product_update_quantity_form'] = AddToCartBookForm(initial={
+        item['book_update_quantity_form'] = AddToCartBookForm(initial={
             'quantity': item['quantity'],
             'inplace': True,
         })

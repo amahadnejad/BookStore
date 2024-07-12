@@ -44,6 +44,10 @@ class BookCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView
     template_name = 'books/book_create.html'
     success_message = _('Book Has SuccessFully Created')
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 
 class BookUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, generic.UpdateView):
     model = Book
