@@ -5,17 +5,10 @@
 {% load humanize %}
 
 {% block page_title %}{% trans 'Order Receipt' %}{% endblock page_title %}
-{% block styles %}
 
-{% endblock styles %}
-#body {
-direction: rtl;
-text-align: right;
-}
 {% block content %}
-<div class="body">
     <!-- Header Section -->
-    <header class="bg-light py-3">
+    <header class="bg-light py-3" dir="rtl">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -76,45 +69,28 @@ text-align: right;
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                {% for item in order_items %}
+                     <tr>
                     <td>1</td>
-                    <td>Product A</td>
-                    <td>10</td>
-                    <td>$50.00</td>
-                    <td>$500.00</td>
+                    <td>{{ item.book.title }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.price }}</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Product B</td>
-                    <td>5</td>
-                    <td>$100.00</td>
-                    <td>$500.00</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Product C</td>
-                    <td>2</td>
-                    <td>$200.00</td>
-                    <td>$400.00</td>
-                </tr>
-                <tr>
-                    <td colspan="4" class="text-left"><strong>Subtotal</strong></td>
-                    <td>$1400.00</td>
-                </tr>
-                <tr>
-                    <td colspan="4" class="text-left"><strong>Tax (10%)</strong></td>
-                    <td>$140.00</td>
-                </tr>
+
+                {% endfor %}
+                
+
+
                 <tr>
                     <td colspan="4" class="text-left"><strong>Total</strong></td>
-                    <td>$1540.00</td>
+                    <td></td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-</div>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
