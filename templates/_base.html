@@ -41,7 +41,10 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'book_list' %}">{% trans 'books' %}</a>
                 <a class="nav-link active" href="{% url 'book_create' %}">{% trans 'Add New Book' %}</a>
                 <a class="nav-link active" href="{% url 'cart:cart_detail' %}">{% trans 'Cart' %}</a>
-                <a class="nav-link " href="{% url 'aboutus' %}">{% trans 'About Us' %}</a>
+                <a class="nav-link active" href="{% url 'aboutus' %}">{% trans 'About Us' %}</a>
+                {% if user.is_authenticated %}
+                    <a class="nav-link active" href="#">سفارش ها</a>
+                {% endif %}
             </div>
         </div>
         {% if user.is_authenticated %}
@@ -86,11 +89,14 @@
                     <hr>
                     <p>
                         {% blocktrans %}
-                        The bookstore project is an online platform for selling various printed and electronic books,
-                        aimed at
-                        providing easy and quick access to books for reading enthusiasts. This bookstore offers a wide
-                        collection of books in different categories, from literature and science to children's books and
-                        contemporary novels, allowing users to easily find and purchase their desired books.
+                            The bookstore project is an online platform for selling various printed and electronic
+                            books,
+                            aimed at
+                            providing easy and quick access to books for reading enthusiasts. This bookstore offers a
+                            wide
+                            collection of books in different categories, from literature and science to children's books
+                            and
+                            contemporary novels, allowing users to easily find and purchase their desired books.
                         {% endblocktrans %}
                     </p>
                 </div>
