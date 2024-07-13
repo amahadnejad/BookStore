@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-07 00:42+0330\n"
-"PO-Revision-Date: 2024-07-12 16:42+0330\n"
-"Last-Translator: امیر احمدی <amir@amir.com>\n"
+"POT-Creation-Date: 2024-07-13 18:38+0330\n"
+"PO-Revision-Date: 2024-07-13 18:41+0330\n"
+"Last-Translator: امیر جعفری <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -83,100 +83,101 @@ msgstr "اضافه کردن کتاب جدید"
 msgid "publish"
 msgstr "انتشار"
 
-#: .\templates\books\book_create.html:25 .\templates\books\book_update.html:24
+#: .\templates\books\book_create.html:25 .\templates\books\book_update.html:25
 msgid "help"
 msgstr "راهنما"
 
-#: .\templates\books\book_create.html:28 .\templates\books\book_update.html:27
+#: .\templates\books\book_create.html:28 .\templates\books\book_update.html:28
 msgid "Enter the book information in the form and click on the save button"
 msgstr ""
 "اطلاعات کتاب را در فرم این صفحه وارد کنید و سپس بر روی دکمه ذخیره کلیک کنید."
 
-#: .\templates\books\book_delete.html:4 .\templates\books\book_delete.html:10
-#: .\templates\books\book_delete.html:15
+#: .\templates\books\book_delete.html:5 .\templates\books\book_delete.html:11
+#: .\templates\books\book_delete.html:16
 msgid "Delete"
 msgstr "حذف"
 
-#: .\templates\books\book_delete.html:14
+#: .\templates\books\book_delete.html:15
 msgid "Are you sure to delete this book?"
 msgstr "آیا از حذف این کتاب مطمئن هستید؟"
 
-#: .\templates\books\book_delete.html:16
+#: .\templates\books\book_delete.html:18
 msgid "Cancel"
 msgstr "لفو"
 
-#: .\templates\books\book_delete.html:27 .\templates\books\book_update.html:33
+#: .\templates\books\book_delete.html:29 .\templates\books\book_update.html:34
 msgid "Book Image"
 msgstr "تصویر کتاب"
 
-#: .\templates\books\book_detail.html:8
+#: .\templates\books\book_detail.html:9
 msgid "book"
 msgstr "کتاب"
 
-#: .\templates\books\book_detail.html:28 .\templates\books\book_list.html:35
+#: .\templates\books\book_detail.html:32 .\templates\books\book_list.html:35
 msgid "author"
 msgstr "نویسنده"
 
-#: .\templates\books\book_detail.html:31
+#: .\templates\books\book_detail.html:35
 msgid "translator"
 msgstr "مترجم"
 
-#: .\templates\books\book_detail.html:34
+#: .\templates\books\book_detail.html:38
 msgid "publisher"
 msgstr "انتشارات"
 
-#: .\templates\books\book_detail.html:37
+#: .\templates\books\book_detail.html:41
 msgid "edit"
 msgstr "ویرایش"
 
-#: .\templates\books\book_detail.html:40
+#: .\templates\books\book_detail.html:44
 msgid "delete"
 msgstr "حذف"
 
-#: .\templates\books\book_detail.html:57
-msgid "Add To Cart"
-msgstr "اضافه کردن به سبد خرید"
-
-#: .\templates\books\book_detail.html:65
+#: .\templates\books\book_detail.html:76
 msgid "toman"
 msgstr "تومان"
 
-#: .\templates\books\book_detail.html:79
+#: .\templates\books\book_detail.html:90
 msgid "comments"
 msgstr "نظرات"
 
-#: .\templates\books\book_detail.html:88
+#: .\templates\books\book_detail.html:99
 msgid "I Recommend This Book"
 msgstr "این کتاب را توصیه میکنم"
 
-#: .\templates\books\book_detail.html:91
+#: .\templates\books\book_detail.html:102
 msgid "I Don't Recommend This Book"
 msgstr "این کتاب را توصیه نمیکنم"
 
-#: .\templates\books\book_detail.html:100
+#: .\templates\books\book_detail.html:111
 msgid "No Comment Found!"
 msgstr "نظری یافت نشد!"
 
-#: .\templates\books\book_detail.html:110
-#: .\templates\books\book_detail.html:119
+#: .\templates\books\book_detail.html:121
+#: .\templates\books\book_detail.html:130
 msgid "Enter Your Comment"
 msgstr "نظر خود را وارد کنید"
 
-#: .\templates\books\book_detail.html:114
+#: .\templates\books\book_detail.html:125
 msgid "Send"
 msgstr "ارسال"
 
-#: .\templates\books\book_detail.html:120
+#: .\templates\books\book_detail.html:131
 msgid "You Must Login To Create A Comment"
 msgstr "برای ایجاد نظر باید وارد حساب کاربری خود شوید"
 
-#: .\templates\books\book_detail.html:122
+#: .\templates\books\book_detail.html:133
 msgid "login"
 msgstr "ورود"
 
 #: .\templates\books\book_list.html:7
 msgid "Books"
 msgstr "کتاب ها"
+
+#: .\templates\books\book_list.html:32
+#| msgid "Books"
+msgid "Book"
+msgstr "کتاب"
 
 #: .\templates\books\book_list.html:33
 msgid "Toman"
@@ -186,16 +187,16 @@ msgstr "تومان"
 msgid "Read More"
 msgstr "بیشتر بخوانید"
 
-#: .\templates\books\book_list.html:56
+#: .\templates\books\book_list.html:76
 msgid "Previous"
 msgstr "قبلی"
 
-#: .\templates\books\book_list.html:61
+#: .\templates\books\book_list.html:82
 msgid "Next"
 msgstr "بعدی"
 
-#: .\templates\books\book_update.html:5 .\templates\books\book_update.html:11
-#: .\templates\books\book_update.html:16
+#: .\templates\books\book_update.html:6 .\templates\books\book_update.html:12
+#: .\templates\books\book_update.html:17
 msgid "Update"
 msgstr "بروزرسانی"
 
@@ -203,10 +204,13 @@ msgstr "بروزرسانی"
 msgid "Book Has SuccessFully Created"
 msgstr "کتاب با موفقیت ایجاد شد!"
 
-#: .\views.py:57
+#: .\views.py:61
 msgid "Book Has SuccessFully Updated"
 msgstr "کتاب با موفقیت بروزرسانی شد!"
 
-#: .\views.py:69
+#: .\views.py:73
 msgid "Book Has SuccessFully ِDeleted"
 msgstr "کتاب با موفقیت حذف شد!"
+
+#~ msgid "Add To Cart"
+#~ msgstr "اضافه کردن به سبد خرید"

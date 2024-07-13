@@ -7,64 +7,55 @@
 {% block page_title %}{% trans 'Books' %}{% endblock page_title %}
 {% block content %}
 
-    <div class="container mt-4">
-        <div class="row flex-row-reverse">
+    <div class="container mt-4" dir="rtl">
+        <div class="row">
             {% for book in book_list %}
-
-                <div class="card m-2" style="max-width: 48%">
-                    <div class="row g-0 h-100" dir="rtl">
-                        {% if book.cover %}
-                            <div class="col-md-4 mt-1">
-                                <img src="{{ book.cover.url }}"
-                                     class="img-fluid rounded-start" alt="..." width="1400" height="1000">
-                            </div>
-                        {% else %}
-                            <div class="col-md-4 mt-1">
-                                <img src="{% static 'icons/404.png' %}"
-                                     class="img-fluid rounded-start" alt="...">
-                            </div>
-                        {% endif %}
-
-                        <div class="col-md-8 h-100">
-                            <div class="d-flex flex-column justify-content-between h-100">
-                                <div class="card-body">
-                                    <a href="{{ book.get_absolute_url }}" class="text-decoration-none"><h3
-                                            class="card-title"><strong>{{ book.title }}</strong></h3></a>
-                                    <p>{% trans "Price" %}: {{ book.price|intcomma:False }} {% trans 'Toman' %} </p>
-                                    <p class="card-text pt-2">{{ book.description|truncatewords:30 }}</p>
-                                    <p class="text-muted">{% trans 'author' %}: {{ book.author }} </p>
-                                    <div class="text-start d-flex flex-row-reverse align-items-center gap-3">
-                                        <a href="{{ book.get_absolute_url }}">
-                                            <button class="btn btn-success">{% trans 'Read More' %}</button>
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0 h-100">
+                            {% if book.cover %}
+                                <div class="col-md-4 mt-1">
+                                    <img src="{{ book.cover.url }}" class="img-fluid rounded-start" alt="...">
+                                </div>
+                            {% else %}
+                                <div class="col-md-4 mt-1">
+                                    <img src="{% static 'icons/404.png' %}" class="img-fluid rounded-start" alt="...">
+                                </div>
+                            {% endif %}
+                            <div class="col-md-8 h-100">
+                                <div class="d-flex flex-column justify-content-between h-100">
+                                    <div class="card-body">
+                                        <a href="{{ book.get_absolute_url }}" class="text-decoration-none">
+                                            <h3 class="card-title"><strong>{% trans 'Book' %} {{ book.title }}</strong>
+                                            </h3>
                                         </a>
-                                        <form action="{% url 'cart:cart_add' book.id %}" method="POST">
-                                            {% csrf_token %}
-                                            <input type="hidden"
-                                                   class="quantity-input"
-                                                   name="quantity"
-                                                   id="qty-1"
-                                                   value="1"
-                                                   min="1">
-                                            <button type="submit" class="btn btn-primary border-0 text-light">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
-                                                     fill="currentColor" class="bi bi-cart-plus"
-                                                     viewBox="0 0 16 16">
-                                                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
-                                                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                                                </svg>
-                                            </button>
-                                        </form>
-
+                                        <p>{% trans "Price" %}: {{ book.price|intcomma:False }} {% trans 'Toman' %}</p>
+                                        <p class="card-text pt-2">{{ book.description|truncatewords:20 }}</p>
+                                        <p class="text-muted">{% trans 'Author' %}: {{ book.author }}</p>
+                                        <div class="text-start d-flex flex-row-reverse gap-2">
+                                            <a href="{{ book.get_absolute_url }}">
+                                                <button class="btn btn-success">{% trans 'Read More' %}</button>
+                                            </a>
+                                            <form action="{% url 'cart:cart_add' book.id %}" method="POST">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="quantity" value="1" min="1">
+                                                <button type="submit" class="btn btn-primary border-0 text-light">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+                                                         fill="currentColor" class="bi bi-cart-plus"
+                                                         viewBox="0 0 16 16">
+                                                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             {% endfor %}
-
         </div>
     </div>
 
@@ -81,7 +72,7 @@
                 <li class="page-item"><a class="page-link"
                                          href="?page={{ page_obj.next_page_number }}">{% trans 'Next' %}</a></li>
             {% endif %}
-
         </ul>
     </nav>
+
 {% endblock content %}
