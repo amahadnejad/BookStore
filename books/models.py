@@ -25,7 +25,7 @@ class Book(models.Model):
 
 
 class Comment(models.Model):
-    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE )
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='comments')
     text = models.TextField(verbose_name=_('Text'))
     is_active = models.BooleanField(default=True, verbose_name=_('Is-Active'))
