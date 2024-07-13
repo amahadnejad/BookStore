@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-13 01:32+0330\n"
-"PO-Revision-Date: 2024-07-13 01:56+0330\n"
-"Last-Translator: جلیل جعفری <amir@amir.com>\n"
+"POT-Creation-Date: 2024-07-13 10:36+0330\n"
+"PO-Revision-Date: 2024-07-13 10:37+0330\n"
+"Last-Translator: امیر جعفری <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgid "Checkout Detail"
 msgstr "جزئیات سفارش"
 
 #: .\templates\orders\order_create.html:26
-#: .\templates\orders\order_receipt.html:18
+#: .\templates\orders\order_receipt.html:19
 msgid "Order"
 msgstr "سفارش"
 
@@ -50,7 +50,8 @@ msgid "Toman"
 msgstr "تومان"
 
 #: .\templates\orders\order_create.html:56
-#: .\templates\orders\order_receipt.html:86
+#: .\templates\orders\order_receipt.html:87
+#: .\templates\orders\user_orders.html:20
 msgid "Total"
 msgstr "مجموع"
 
@@ -62,96 +63,112 @@ msgstr "روش پرداخت"
 msgid "Default online portal"
 msgstr "درگاه پرداخت پیش فرض"
 
-#: .\templates\orders\order_receipt.html:7
+#: .\templates\orders\order_receipt.html:8
 msgid "Order Receipt"
 msgstr "فاکتور سفارش"
 
-#: .\templates\orders\order_receipt.html:15
+#: .\templates\orders\order_receipt.html:16
 msgid "Purchase Order"
 msgstr "فاکتور خرید"
 
-#: .\templates\orders\order_receipt.html:19
+#: .\templates\orders\order_receipt.html:20
 msgid "Date"
 msgstr "تاریخ"
 
-#: .\templates\orders\order_receipt.html:30
+#: .\templates\orders\order_receipt.html:31
 msgid "Company Information"
 msgstr "اطلاعات فروشگاه"
 
-#: .\templates\orders\order_receipt.html:32
+#: .\templates\orders\order_receipt.html:33
 msgid "Company Name"
 msgstr "نام فروشگاه"
 
-#: .\templates\orders\order_receipt.html:32
+#: .\templates\orders\order_receipt.html:33
 msgid "Ketab No"
 msgstr "کتاب نو"
 
-#: .\templates\orders\order_receipt.html:33
-#: .\templates\orders\order_receipt.html:44
+#: .\templates\orders\order_receipt.html:34
+#: .\templates\orders\order_receipt.html:45
 msgid "Address"
 msgstr "آدرس"
 
-#: .\templates\orders\order_receipt.html:33
+#: .\templates\orders\order_receipt.html:34
 msgid "Iran, Tehran"
 msgstr "ایران ، تهران"
 
-#: .\templates\orders\order_receipt.html:34
+#: .\templates\orders\order_receipt.html:35
 msgid "Email"
 msgstr "ایمیل"
 
-#: .\templates\orders\order_receipt.html:34
-msgid "info@ketabno.com"
-msgstr ""
-
-#: .\templates\orders\order_receipt.html:35
-#: .\templates\orders\order_receipt.html:45
+#: .\templates\orders\order_receipt.html:36
+#: .\templates\orders\order_receipt.html:46
 msgid "Phone"
 msgstr "شماره تماس"
 
-#: .\templates\orders\order_receipt.html:39
+#: .\templates\orders\order_receipt.html:40
 msgid "Customer Information"
 msgstr "اطلاعات مشتری"
 
-#: .\templates\orders\order_receipt.html:41
+#: .\templates\orders\order_receipt.html:42
 msgid "Customer Name"
 msgstr "نام مشتری"
 
-#: .\templates\orders\order_receipt.html:42
+#: .\templates\orders\order_receipt.html:43
 msgid "Country"
 msgstr "کشور"
 
-#: .\templates\orders\order_receipt.html:43
+#: .\templates\orders\order_receipt.html:44
 msgid "City"
 msgstr "شهر"
 
-#: .\templates\orders\order_receipt.html:47
+#: .\templates\orders\order_receipt.html:48
 msgid "Note"
 msgstr "یادداشت"
 
-#: .\templates\orders\order_receipt.html:60
+#: .\templates\orders\order_receipt.html:61
 msgid "Order Details"
 msgstr "جزئیات سفارش"
 
-#: .\templates\orders\order_receipt.html:65
+#: .\templates\orders\order_receipt.html:66
 msgid "Product Name"
 msgstr "نام محصول"
 
-#: .\templates\orders\order_receipt.html:66
+#: .\templates\orders\order_receipt.html:67
 msgid "Quantity"
 msgstr "تعداد"
 
-#: .\templates\orders\order_receipt.html:67
+#: .\templates\orders\order_receipt.html:68
 msgid "Unit Price"
 msgstr "قیمت واحد"
 
-#: .\templates\orders\order_receipt.html:68
+#: .\templates\orders\order_receipt.html:69
 msgid "Total Price"
 msgstr "مجموع "
 
-#: .\views.py:17
+#: .\templates\orders\user_orders.html:4 .\templates\orders\user_orders.html:9
+msgid "My Orders"
+msgstr "سفارش های من"
+
+#: .\templates\orders\user_orders.html:17
+#| msgid "Order"
+msgid "Order ID"
+msgstr "کد سفارش"
+
+#: .\templates\orders\user_orders.html:21
+msgid "Click to view details"
+msgstr "جزئیات سفارش"
+
+#: .\templates\orders\user_orders.html:27
+msgid "You have no orders."
+msgstr "شما سفارشی ثبت نکرده اید!"
+
+#: .\views.py:18
 msgid "You can not proceed to checkout page because your cart is empty."
 msgstr "شما نمی توانید به صفحه پرداخت ادامه دهید زیرا سبد خرید شما خالی است."
 
-#: .\views.py:44
+#: .\views.py:45
 msgid "Your Order Successfully Placed"
 msgstr "سفارش شما با موفقیت انجام شد"
+
+#~ msgid "Your Orders"
+#~ msgstr "سفارش شما"

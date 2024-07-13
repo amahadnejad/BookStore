@@ -1,29 +1,29 @@
 {% extends "_base.html" %}
-
-{% block page_title %}My Orders{% endblock page_title %}
+{% load i18n %}
+{% load humanize %}
+{% block page_title %}{% trans 'My Orders' %}{% endblock page_title %}
 
 {% block content %}
 <div class="card" dir="rtl">
     <div class="card-header">
-        <h1>Your Orders</h1>
+        <h1>{% trans 'My Orders' %}</h1>
     </div>
     <div class="card-body">
         {% if orders %}
             <div class="list-group">
                 {% for order in orders %}
-                    <a href="" class="list-group-item list-group-item-action">
+                    <a href="{% url 'order_receipt' order.id %}" class="list-group-item list-group-item-action">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">Order ID: {{ order.id }}</h5>
+                            <h5 class="mb-1">{% trans 'Order ID' %}: {{ order.id }}</h5>
                             <small>{{ order.datetime_created }}</small>
+
                         </div>
-                        <p class="mb-1">Total: 250000</p>
-                        <small>Click to view details</small>
-                    </a>
+
                 {% endfor %}
             </div>
         {% else %}
             <div class="alert alert-info" role="alert">
-                You have no orders.
+                {% trans 'You have no orders.' %}
             </div>
         {% endif %}
     </div>
