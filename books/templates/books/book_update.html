@@ -1,6 +1,7 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
 {% load i18n %}
+{% load static %}
 
 {% block page_title %}{% trans 'Update' %} {{ book.title }}{% endblock page_title %}
 {% block content %}
@@ -37,6 +38,9 @@
                                 {% if book.cover %}
                                     <img src="{{ book.cover.url }}"
                                          class="img-fluid rounded-start mb-3" alt="{{ book.title }}">
+                                {% else %}
+                                    <img src="{% static 'icons/404.png' %}"
+                                         class="img-fluid rounded-start" alt="...">
                                 {% endif %}
                             </div>
                         </div>

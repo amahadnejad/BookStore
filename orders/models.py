@@ -3,7 +3,7 @@ from django.conf import settings
 
 
 class Order(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=100, verbose_name='FirstName')
     last_name = models.CharField(max_length=100, verbose_name='LastName')
     email = models.EmailField(verbose_name='Email')

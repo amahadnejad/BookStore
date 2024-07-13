@@ -1,5 +1,6 @@
 {% extends "_base.html" %}
 
+{% load static %}
 {% load crispy_forms_tags %}
 {% load humanize %}
 {% load i18n %}
@@ -17,6 +18,9 @@
                             <div class="shadow">
                                 {% if book.cover %}
                                     <img src="{{ book.cover.url }}"
+                                         class="img-fluid rounded-start" alt="...">
+                                {% else %}
+                                    <img src="{% static 'icons/404.png' %}"
                                          class="img-fluid rounded-start" alt="...">
                                 {% endif %}
 
