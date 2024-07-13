@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils.translation import gettext as _
+from django.views.generic import ListView
 
 from cart.cart import Cart
 from .forms import OrderForm
@@ -47,6 +48,15 @@ def order_create_view(request):
     return render(request, 'orders/order_create.html', {
         'form': order_form,
     })
+
+
+class UserOrdersListView(ListView):
+    model = Order
+    template_name = 'orders/user_orders.html'
+    context_object_name = 'orders'
+
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user).order_by('-datetime_created')
 
 
 @login_required

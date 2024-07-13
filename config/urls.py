@@ -23,7 +23,7 @@ urlpatterns = [
     path('', include('books.urls')),
     path('', include('pages.urls')),
     path('cart/', include('cart.urls')),
-    path('order/', include('orders.urls')),
+    path('orders/', include('orders.urls')),
     path('accounts/', include("allauth.urls")),
     path('rosetta/', include("rosetta.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
