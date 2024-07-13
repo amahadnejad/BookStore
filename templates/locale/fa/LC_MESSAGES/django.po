@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-07 15:14+0330\n"
-"PO-Revision-Date: 2024-07-07 15:15+0330\n"
-"Last-Translator:   <amir@amir.com>\n"
+"POT-Creation-Date: 2024-07-13 10:44+0330\n"
+"PO-Revision-Date: 2024-07-13 10:45+0330\n"
+"Last-Translator: امیر جعفری <amir@amir.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -27,60 +27,76 @@ msgstr "خانه"
 msgid "books"
 msgstr "کتاب ها"
 
-#: .\_base.html:42
+#: .\_base.html:43
 msgid "Add New Book"
 msgstr "کتاب جدید"
 
-#: .\_base.html:43
+#: .\_base.html:45
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\_base.html:44 .\_base.html:111
+#: .\_base.html:46 .\_base.html:120
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\_base.html:49
+#: .\_base.html:48
+msgid "Orders"
+msgstr "سفارشات"
+
+#: .\_base.html:54
 msgid "logout"
 msgstr "خروج"
 
-#: .\_base.html:52 .\account\password_reset_form.html:26
+#: .\_base.html:57 .\account\password_reset_form.html:26
 msgid "login"
 msgstr "ورود"
 
-#: .\_base.html:54
+#: .\_base.html:59
 msgid "signup"
 msgstr "ثبت نام"
 
-#: .\_base.html:85
+#: .\_base.html:90
 msgid "About Website"
 msgstr "درباره وبسایت"
 
-#: .\_base.html:88
+#: .\_base.html:93
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        The bookstore project is an online platform for selling various printed and electronic books,\n"
+#| "                        aimed at\n"
+#| "                        providing easy and quick access to books for reading enthusiasts. This bookstore offers a wide\n"
+#| "                        collection of books in different categories, from literature and science to children's books and\n"
+#| "                        contemporary novels, allowing users to easily find and purchase their desired books.\n"
+#| "                        "
 msgid ""
 "\n"
-"                        The bookstore project is an online platform for selling various printed and electronic books,\n"
-"                        aimed at\n"
-"                        providing easy and quick access to books for reading enthusiasts. This bookstore offers a wide\n"
-"                        collection of books in different categories, from literature and science to children's books and\n"
-"                        contemporary novels, allowing users to easily find and purchase their desired books.\n"
+"                            The bookstore project is an online platform for selling various printed and electronic\n"
+"                            books,\n"
+"                            aimed at\n"
+"                            providing easy and quick access to books for reading enthusiasts. This bookstore offers a\n"
+"                            wide\n"
+"                            collection of books in different categories, from literature and science to children's books\n"
+"                            and\n"
+"                            contemporary novels, allowing users to easily find and purchase their desired books.\n"
 "                        "
 msgstr ""
 "\n"
 "پروژه فروشگاه کتاب یک پلتفرم آنلاین برای فروش انواع کتاب‌ های چاپی و الکترونیکی است که هدف آن ارائه دسترسی آسان و سریع به کتاب‌ها برای علاقه‌مندان به مطالعه است. این فروشگاه با مجموعه‌ای گسترده از کتاب‌ها در دسته‌بندی‌های مختلف، از ادبیات و علمی تا کتاب‌های کودکان و رمان‌های معاصر، به کاربران این امکان را می‌دهد تا به راحتی کتاب مورد نظر خود را پیدا و خریداری کنند."
 
-#: .\_base.html:100
+#: .\_base.html:108
 msgid "Links"
 msgstr "پیوند ها"
 
-#: .\_base.html:104
+#: .\_base.html:113
 msgid "Go To Store"
 msgstr "رفتن به فروشگاه"
 
-#: .\_base.html:108
+#: .\_base.html:117
 msgid "Go To Cart"
 msgstr "رفتن به سبد خرید"
 
-#: .\_base.html:123
+#: .\_base.html:132
 msgid "Copyright"
 msgstr "کپی رایت"
 

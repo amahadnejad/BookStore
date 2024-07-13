@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils.translation import gettext as _
 from django.views.generic import ListView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from cart.cart import Cart
 from .forms import OrderForm
@@ -50,7 +51,7 @@ def order_create_view(request):
     })
 
 
-class UserOrdersListView(ListView):
+class UserOrdersListView(LoginRequiredMixin, ListView):
     model = Order
     template_name = 'orders/user_orders.html'
     context_object_name = 'orders'
