@@ -45,7 +45,7 @@
                                             <tr>
                                                 <th>{{ item.book_obj.title }}<strong><span> &#10005;</span>{{ item.quantity }}
                                                 </strong></th>
-                                                <td class="text-end">{{ item.book_obj.price }} {% trans 'Toman' %}</td>
+                                                <td class="text-end">{{ item.book_obj.price|intcomma:False }} {% trans 'Toman' %}</td>
                                             </tr>
                                         {% endfor %}
 
@@ -54,7 +54,7 @@
                                         <tfoot>
                                         <tr class="cart-subtotal">
                                             <th>{% trans 'Total' %}</th>
-                                            <td class="text-end">{{ cart.get_total_price }} {% trans 'Toman' %}</td>
+                                            <td class="text-end">{{ cart.get_total_price|intcomma:False }} {% trans 'Toman' %}</td>
                                         </tr>
                                         </tfoot>
                                     </table>
