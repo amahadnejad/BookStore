@@ -37,10 +37,10 @@
                             <div class="shadow">
                                 {% if book.cover %}
                                     <img src="{{ book.cover.url }}"
-                                         class="img-fluid rounded-start mb-3" alt="{{ book.title }}">
+                                         class="img-fluid rounded-start mb-3" alt="{{ book.title }}" width="200" height="250">
                                 {% else %}
                                     <img src="{% static 'icons/404.png' %}"
-                                         class="img-fluid rounded-start" alt="...">
+                                         class="img-fluid rounded-start" alt="..." width="200" height="250">
                                 {% endif %}
                             </div>
                         </div>
