@@ -5,7 +5,7 @@
 {% load humanize %}
 {% load multiply_filter %}
 {% load jalali_tags %}
-
+{% load persian_translation_tags %}
 {% block page_title %}{% trans 'Order Receipt' %}{% endblock page_title %}
 
 {% block content %}
@@ -17,8 +17,8 @@
                     <h1>{% trans 'Purchase Order' %}</h1>
                 </div>
                 <div class="col-md-6 text-left">
-                    <h4>{% trans 'Order' %} {{ order.id }}</h4>
-                    <p>{% trans 'Date' %}: {{ order.datetime_created|to_jalali:'%Y/%m/%d' }}</p>
+                    <h4>{% trans 'Order' %} {{ order.id|translate_number }}</h4>
+                    <p>{% trans 'Date' %}: {{ order.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}</p>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                         <strong>{% trans 'Country' %}:</strong> {{ order.country }} <br>
                         <strong>{% trans 'City' %}:</strong> {{ order.city }} <br>
                         <strong>{% trans 'Address' %}:</strong> {{ order.address }} <br>
-                        <strong>{% trans 'Phone' %}:</strong> {{ order.phone_number }} <br>
+                        <strong>{% trans 'Phone' %}:</strong> {{ order.phone_number|translate_number }} <br>
                         {% if order.order_notes %}
                             <strong>{% trans 'Note' %}:</strong>{{ order.order_notes }}<br>
                         {% endif %}
@@ -73,11 +73,11 @@
                 <tbody>
                 {% for item in order_items %}
                     <tr>
-                        <td>{{ forloop.counter }}</td>
+                        <td>{{ forloop.counter|translate_number }}</td>
                         <td>{{ item.book.title }}</td>
-                        <td>{{ item.quantity }}</td>
-                        <td>{{ item.price|intcomma:False }}</td>
-                        <td>{{ item.price|multiply:item.quantity|intcomma:False }}</td>
+                        <td>{{ item.quantity|translate_number }}</td>
+                        <td>{{ item.price|intcomma:False|translate_number }}</td>
+                        <td>{{ item.price|multiply:item.quantity|intcomma:False|translate_number }}</td>
                     </tr>
 
                 {% endfor %}
@@ -86,7 +86,7 @@
 
                 <tr>
                     <td colspan="4" class="text-left"><strong>{% trans 'Total' %}</strong></td>
-                    <td>{{ total_price|intcomma:False }}</td>
+                    <td>{{ total_price|intcomma:False|translate_number }}</td>
                 </tr>
                 </tbody>
             </table>
