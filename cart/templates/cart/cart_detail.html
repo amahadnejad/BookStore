@@ -2,6 +2,7 @@
 {% load static crispy_forms_tags i18n %}
 {% load i18n %}
 {% load humanize %}
+{% load persian_translation_tags %}
 
 {% block page_title %}{% trans 'Cart' %}{% endblock page_title %}
 
@@ -64,7 +65,7 @@
                                                     </h5>
                                                 </td>
                                                 <td class="product-price">
-                                                    <span class="money">{{ item.book_obj.price|intcomma:False }} {% trans 'Toman' %}</span>
+                                                    <span class="money">{{ item.book_obj.price|intcomma:False|translate_number }} {% trans 'Toman' %}</span>
                                                 </td>
                                                 <td class="product-quantity">
                                                     <form class="d-flex"
@@ -93,7 +94,7 @@
                                                     </form>
                                                 </td>
                                                 <td class="product-total-price">
-                                                    <span class="money">{{ item.total_price|intcomma:False }} {% trans 'Toman' %}</span>
+                                                    <span class="money">{{ item.total_price|intcomma:False|translate_number }} {% trans 'Toman' %}</span>
                                                 </td>
                                             </tr>
                                         {% endfor %}
@@ -125,7 +126,7 @@
                                     <div class="cart-calculator">
                                         <div class="d-flex justify-content-between mb-2">
                                             <span>{% trans 'Total' %}</span>
-                                            <span class="money">{{ cart.get_total_price|intcomma:False }} {% trans 'Toman' %}</span>
+                                            <span class="money">{{ cart.get_total_price|intcomma:False|translate_number }} {% trans 'Toman' %}</span>
                                         </div>
 
                                     </div>
