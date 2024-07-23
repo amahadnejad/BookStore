@@ -5,6 +5,7 @@
 {% load humanize %}
 {% load i18n %}
 {% load jalali_tags %}
+{% load persian_translation_tags %}
 
 {% block page_title %}{% trans 'book' %} {{ book.title }}{% endblock page_title %}
 {% block content %}
@@ -27,7 +28,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6 text-center text-md-end mt-md-1 mt-4">
-                            <h1>{% trans 'book' %} {{ book.title }}</h1>
+                            <h1>{% trans 'book' %} {{ book.title|translate_number }}</h1>
                             <h5 class="small my-1"><span
                                     class="text-muted">{% trans 'author' %}: </span>{{ book.author }}</h5>
                             {% if book.translator %}
@@ -75,7 +76,7 @@
                         </div>
                         <div class="col-xs-12 col-md-3 d-flex flex-column">
                             <h3 class="align-self-center pt-2 text-muted align-self-md-end">
-                                {{ book.price|intcomma:False }} {% trans 'toman' %}
+                                {{ book.price|intcomma:False|translate_number }} {% trans 'toman' %}
                             </h3>
                         </div>
                     </div>
@@ -83,7 +84,7 @@
 
                 <div class="d-flex justify-content-center">
                     <div class="my-3 p-5 w-sm-75 w-100">
-                        {{ book.description|linebreaksbr }}
+                        {{ book.description|translate_number|linebreaksbr }}
                     </div>
                 </div>
 
@@ -97,13 +98,13 @@
                                         <h5 class="mb-3">{{ comment.user|capfirst }}</h5>
 
                                         {% if comment.recommend %}
-                                            <p class="text-muted">{{ comment.datetime_created|to_jalali:'%Y/%m/%d' }}
+                                            <p class="text-muted">{{ comment.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}
                                                 | {% trans 'I Recommend This Book' %}</p>
                                         {% else %}
-                                            <p class="text-muted">{{ comment.datetime_created|to_jalali:'%Y/%m/%d' }}
+                                            <p class="text-muted">{{ comment.datetime_created|to_jalali:'%Y/%m/%d'|translate_number }}
                                                 | {% trans "I Don't Recommend This Book" %}</p>
                                         {% endif %}
-                                        <p>{{ comment.text|linebreaksbr }}</p>
+                                        <p>{{ comment.text|translate_number|linebreaksbr }}</p>
                                     </div>
                                 {% endif %}
 
