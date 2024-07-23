@@ -3,6 +3,7 @@
 {% load i18n %}
 {% load static %}
 {% load humanize %}
+{% load persian_translation_tags %}
 
 {% block page_title %}{% trans 'Books' %}{% endblock page_title %}
 {% block content %}
@@ -26,10 +27,10 @@
                                 <div class="d-flex flex-column justify-content-between h-100">
                                     <div class="card-body">
                                         <a href="{{ book.get_absolute_url }}" class="text-decoration-none">
-                                            <h3 class="card-title"><strong>{% trans 'Book' %} {{ book.title }}</strong>
+                                            <h3 class="card-title"><strong>{% trans 'Book' %} {{ book.title|translate_number }}</strong>
                                             </h3>
                                         </a>
-                                        <p>{% trans "Price" %}: {{ book.price|intcomma:False }} {% trans 'Toman' %}</p>
+                                        <p>{% trans "Price" %}: {{ book.price|intcomma:False|translate_number }} {% trans 'Toman' %}</p>
                                         <p class="card-text pt-2">{{ book.description|truncatewords:20 }}</p>
                                         <p class="text-muted">{% trans 'Author' %}: {{ book.author }}</p>
                                         <div class="text-start d-flex flex-row-reverse gap-2">
@@ -67,7 +68,7 @@
                                          href="?page={{ page_obj.previous_page_number }}">{% trans 'Previous' %}</a>
                 </li>
             {% endif %}
-            <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+            <li class="page-item"><a class="page-link" href="#">{{ page_obj.number|translate_number }}</a></li>
             {% if page_obj.has_next %}
                 <li class="page-item"><a class="page-link"
                                          href="?page={{ page_obj.next_page_number }}">{% trans 'Next' %}</a></li>
