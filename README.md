@@ -2,9 +2,8 @@
 
 # What is this project?
 <span><img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=green" /></span>
-<span><img src="https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white" /></span>
 
-This Project Provides a Fully Functional BookStore Application Using Django, Managed With Docker For Easy Setup And Deployment.
+This Project Provides a Fully Functional BookStore Application Using Django.
 
 Features:
 <p>-> User Authentication</p>
@@ -21,28 +20,33 @@ First Clone The Project.
 git clone https://github.com/amahadnezhad/BookStore
 ```
 
-Then Make Sure Docker Is Running.
-* If You Are On Windows Click On The Docker Desktop Icon And Wait For About a Minute.
-
-Then In The Project Directory Run This Command:
+Then In The Project Directory Run This Command To Make a Virtual Environment:
 
 ```bash
-docker-compose up --build
+python -m venv venv 
 ```
 
-It Will Create Two Containers:
-One For Django And One For PostgreSql As The Database For The Project.
-All The Required Packages Will Be Installed.
+It Will Create a Folder With venv Name And Then Active venv:
+
+Then Use This Command To Install All The Required Packages.
+```bash
+pip install -r requirements.txt
+```
+
+Then Use This Command To Run Project.
+```bash
+python manage.py runserver
+```
 
 ### Install a new package.
 * Attention:
 If You Want To Install a Package For Django Project You Should Run This Command:
 
 ```bash
-docker-compose exec web pip install <package-name>
+pip install <package-name>
 ``` 
 
 Don't Forget To Add The New Package To requirements.txt For Further Use:
 ```bash
-docker-compose exec web pip freeze > requirements.txt
+pip freeze > requirements.txt
 ```
