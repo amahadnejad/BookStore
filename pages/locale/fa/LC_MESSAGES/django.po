@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-07 15:03+0330\n"
-"PO-Revision-Date: 2024-07-07 15:04+0330\n"
-"Last-Translator:   <amir@amir.com>\n"
+"POT-Creation-Date: 2024-08-22 18:41+0330\n"
+"PO-Revision-Date: 2024-08-22 18:42+0430\n"
+"Last-Translator: امیر جعفری <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -57,3 +57,19 @@ msgstr ""
 "پشتیبانی از ناشران و نویسندگان: همکاری با ناشران و نویسندگان برای معرفی و فروش کتاب‌های جدید و محبوب.\n"
 "تجربه کاربری مطلوب: فراهم کردن یک رابط کاربری ساده و کاربرپسند برای تسهیل فرآیند خرید و افزایش رضایت مشتریان.\n"
 "این پروژه با هدف ترویج فرهنگ کتابخوانی و حمایت از صنعت نشر، تلاش می‌کند تا به عنوان یک مرجع قابل اعتماد برای خرید کتاب در دسترس عموم قرار گیرد."
+
+#: .\templates\pages\home.html:6
+msgid "Home"
+msgstr "خانه"
+
+#: .\templates\pages\home.html:14
+msgid "Welcome to KetabNo"
+msgstr "به کتاب نو خوش آمدید"
+
+#: .\templates\pages\home.html:15
+msgid "Discover a world of books and find your next favorite read!"
+msgstr "دنیایی از کتاب ها را کشف کنید و کتاب مورد علاقه خود را پیدا کنید!"
+
+#: .\templates\pages\home.html:16
+msgid "Shop Now"
+msgstr "اکنون خرید کنید"
