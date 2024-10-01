@@ -9,8 +9,10 @@ from .forms import AddToCartBookForm
 
 
 def cart_detail_view(request):
+    # Getting Cart
     cart = Cart(request)
 
+    # Loop Through The Cart
     for item in cart:
         item['book_update_quantity_form'] = AddToCartBookForm(initial={
             'quantity': item['quantity'],
@@ -24,10 +26,13 @@ def cart_detail_view(request):
 
 @require_POST
 def add_to_cart_view(request, book_id):
+    # Getting Cart
     cart = Cart(request)
+    # Getting Book
     book = get_object_or_404(Book, id=book_id)
     form = AddToCartBookForm(request.POST)
 
+    # Clean Data And Add To Cart
     if form.is_valid():
         cleaned_data = form.cleaned_data
         quantity = cleaned_data['quantity']
@@ -37,7 +42,9 @@ def add_to_cart_view(request, book_id):
 
 
 def remove_from_cart(request, book_id):
+    # Getting Cart
     cart = Cart(request)
+    # Getting Book
     book = get_object_or_404(Book, id=book_id)
     cart.remove(book)
 
@@ -45,8 +52,10 @@ def remove_from_cart(request, book_id):
 
 
 def clear_cart(request):
+    # Getting Cart
     cart = Cart(request)
 
+    # Clear Cart If It Has Products
     if len(cart):
         cart.clear()
         messages.success(request, _('All products successfully removed from your cart'))

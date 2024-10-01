@@ -1,8 +1,10 @@
 from django import template
 
+# Register File
 register = template.Library()
 
 
+# Translate Number From English To Persian
 @register.filter
 def translate_number(value):
     value = str(value)

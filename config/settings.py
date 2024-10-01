@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "allauth.account.middleware.AccountMiddleware",
+    "allauth.account.middleware.AccountMiddleware",  # Django All-Auth MiddleWare
 
 ]
 
@@ -84,17 +84,14 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
                 # Custom Context Processors
-                'cart.context_processors.cart',
+                'cart.context_processors.cart',  # Cart Context Processor
             ],
         },
     },
 ]
 
 AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by email
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
@@ -106,7 +103,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # Using sqlite DB
     }
 }
 
@@ -129,6 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
+# --> Switch Language <--
 LANGUAGE_CODE = 'fa-ir'
 # LANGUAGE_CODE = 'en-us'
 
@@ -143,6 +141,7 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# Custom Lacale Folders
 LOCALE_PATHS = (
     'templates/locale',
 )
