@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-15 01:02+0330\n"
-"PO-Revision-Date: 2024-08-22 18:09+0430\n"
-"Last-Translator: امیر جعفری <>\n"
+"POT-Creation-Date: 2024-10-01 16:29+0330\n"
+"PO-Revision-Date: 2024-10-01 16:29+0330\n"
+"Last-Translator: امیرحسین رضائی <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,6 @@ msgid "Email"
 msgstr "ایمیل"
 
 #: .\models.py:12
-#| msgid "Phone"
 msgid "PhoneNumber"
 msgstr "شماره تماس"
 
@@ -49,51 +48,51 @@ msgstr "شهر"
 msgid "Address"
 msgstr "آدرس"
 
-#: .\models.py:17
-#| msgid "Note"
+#: .\models.py:17 .\templates\orders\order_receipt.html:49
 msgid "Notes"
 msgstr "یادداشت"
 
-#: .\templates\orders\order_create.html:7
+#: .\templates\orders\order_create.html:8
 msgid "Checkout"
 msgstr "ثبت سفارش"
 
-#: .\templates\orders\order_create.html:20
+#: .\templates\orders\order_create.html:21
 msgid "Checkout Detail"
 msgstr "جزئیات سفارش"
 
-#: .\templates\orders\order_create.html:26
+#: .\templates\orders\order_create.html:27
 #: .\templates\orders\order_receipt.html:20
 msgid "Order"
 msgstr "سفارش"
 
-#: .\templates\orders\order_create.html:33
+#: .\templates\orders\order_create.html:34
 msgid "Your Order"
 msgstr "سفارش شما"
 
-#: .\templates\orders\order_create.html:39
+#: .\templates\orders\order_create.html:40
 msgid "Product"
 msgstr "محصول"
 
-#: .\templates\orders\order_create.html:40
+#: .\templates\orders\order_create.html:41
 msgid "Final Price"
 msgstr "قیمت نهایی"
 
-#: .\templates\orders\order_create.html:48
-#: .\templates\orders\order_create.html:57
+#: .\templates\orders\order_create.html:49
+#: .\templates\orders\order_create.html:58
+#: .\templates\orders\order_receipt.html:89
 msgid "Toman"
 msgstr "تومان"
 
-#: .\templates\orders\order_create.html:56
+#: .\templates\orders\order_create.html:57
 #: .\templates\orders\order_receipt.html:88
 msgid "Total"
 msgstr "مجموع"
 
-#: .\templates\orders\order_create.html:63
+#: .\templates\orders\order_create.html:64
 msgid "Payment Method"
 msgstr "روش پرداخت"
 
-#: .\templates\orders\order_create.html:69
+#: .\templates\orders\order_create.html:70
 msgid "Default online portal"
 msgstr "درگاه پرداخت پیش فرض"
 
@@ -106,7 +105,7 @@ msgid "Purchase Order"
 msgstr "فاکتور خرید"
 
 #: .\templates\orders\order_receipt.html:21
-#: .\templates\orders\user_orders.html:21
+#: .\templates\orders\user_orders.html:23
 msgid "Date"
 msgstr "تاریخ"
 
@@ -139,10 +138,6 @@ msgstr "اطلاعات مشتری"
 msgid "Customer Name"
 msgstr "نام مشتری"
 
-#: .\templates\orders\order_receipt.html:49
-msgid "Note"
-msgstr "یادداشت"
-
 #: .\templates\orders\order_receipt.html:62
 msgid "Order Details"
 msgstr "جزئیات سفارش"
@@ -163,16 +158,21 @@ msgstr "قیمت واحد"
 msgid "Total Price"
 msgstr "مجموع "
 
-#: .\templates\orders\user_orders.html:7
-#: .\templates\orders\user_orders.html:12
+#: .\templates\orders\user_orders.html:8
+#: .\templates\orders\user_orders.html:13
 msgid "My Orders"
 msgstr "سفارش های من"
 
-#: .\templates\orders\user_orders.html:20
+#: .\templates\orders\user_orders.html:14
+#| msgid "Order ID"
+msgid "Orders Count"
+msgstr "تعداد سفارشات"
+
+#: .\templates\orders\user_orders.html:22
 msgid "Order ID"
 msgstr "کد سفارش"
 
-#: .\templates\orders\user_orders.html:27
+#: .\templates\orders\user_orders.html:29
 msgid "You have no orders."
 msgstr "شما سفارشی ثبت نکرده اید!"
 
@@ -183,6 +183,9 @@ msgstr "شما نمی توانید به صفحه پرداخت ادامه دهی�
 #: .\views.py:46
 msgid "Your Order Successfully Placed"
 msgstr "سفارش شما با موفقیت انجام شد"
+
+#~ msgid "Note"
+#~ msgstr "یادداشت"
 
 #~ msgid "Click to view details"
 #~ msgstr "جزئیات سفارش"
