@@ -13,6 +13,7 @@ class Book(models.Model):
     description = models.TextField(verbose_name=_('Description'))
     price = models.PositiveIntegerField(verbose_name=_('Price'))
     cover = models.ImageField(upload_to='covers/', blank=True, verbose_name=_('Cover'),)
+    stock = models.PositiveIntegerField(verbose_name=_('Stock'), default=0)
     is_active = models.BooleanField(default=True, verbose_name=_('Is_Active'),)
 
     # Automatic DateFields
