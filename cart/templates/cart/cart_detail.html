@@ -78,7 +78,8 @@
                                                                    name="quantity"
                                                                    id="qty-1"
                                                                    value="{{ item.quantity }}"
-                                                                   min="1">
+                                                                   min="1"
+                                                                   max="{{ book.stock }}">
                                                             {{ item.book_update_quantity_form.inplace }}
                                                             <button type="submit" class="border-0">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16"

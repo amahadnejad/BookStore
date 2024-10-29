@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-07 14:54+0330\n"
-"PO-Revision-Date: 2024-07-07 14:55+0330\n"
-"Last-Translator:   <amir@amir.com>\n"
+"POT-Creation-Date: 2024-10-30 01:16+0330\n"
+"PO-Revision-Date: 2024-10-30 01:17+0330\n"
+"Last-Translator: امیرحسین رضائی <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -27,52 +27,61 @@ msgstr "کتاب با موفقیت به سبد خرید اضافه شد!"
 msgid "Book Successfully Removed From Cart"
 msgstr "کتاب با موفقیت از سبد خرید حذف شد!"
 
-#: .\templates\cart\cart_detail.html:6 .\templates\cart\cart_detail.html:15
+#: .\templates\cart\cart_detail.html:7 .\templates\cart\cart_detail.html:16
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\templates\cart\cart_detail.html:33
+#: .\templates\cart\cart_detail.html:34
 msgid "Product Image"
 msgstr "عکس محصول"
 
-#: .\templates\cart\cart_detail.html:34
+#: .\templates\cart\cart_detail.html:35
 msgid "Product Name"
 msgstr "عنوان محصول"
 
-#: .\templates\cart\cart_detail.html:35
+#: .\templates\cart\cart_detail.html:36
 msgid "Price"
 msgstr "قیمت"
 
-#: .\templates\cart\cart_detail.html:36
+#: .\templates\cart\cart_detail.html:37
 msgid "Qty"
 msgstr "تعداد"
 
-#: .\templates\cart\cart_detail.html:37 .\templates\cart\cart_detail.html:123
-#: .\templates\cart\cart_detail.html:127
+#: .\templates\cart\cart_detail.html:38 .\templates\cart\cart_detail.html:124
+#: .\templates\cart\cart_detail.html:128
 msgid "Total"
 msgstr "مجموع"
 
-#: .\templates\cart\cart_detail.html:67 .\templates\cart\cart_detail.html:96
-#: .\templates\cart\cart_detail.html:128
+#: .\templates\cart\cart_detail.html:68 .\templates\cart\cart_detail.html:97
+#: .\templates\cart\cart_detail.html:129
 msgid "Toman"
 msgstr "تومان"
 
-#: .\templates\cart\cart_detail.html:102
+#: .\templates\cart\cart_detail.html:103
 msgid "Cart Is Empty! Add Some Products"
 msgstr "سبد خرید خالی است! تعدادی محصول اضافه کنید."
 
-#: .\templates\cart\cart_detail.html:113
+#: .\templates\cart\cart_detail.html:114
 msgid "Empty Cart"
 msgstr "خالی کردن سبد خرید"
 
-#: .\templates\cart\cart_detail.html:137
+#: .\templates\cart\cart_detail.html:139
 msgid "Checkout"
 msgstr "ثبت سفارش"
 
-#: .\views.py:52
+#: .\views.py:45
+msgid "Sorry! This quantity is not available in our warehouse"
+msgstr "با عرض پوزش! این تعداد در انبار ما موجود نیست."
+
+#: .\views.py:68
 msgid "All products successfully removed from your cart"
 msgstr "تمامی محصولات با موفقیت از سبد خرید حذف شدند!"
 
-#: .\views.py:54
+#: .\views.py:70
 msgid "Your cart is already empty"
 msgstr "سبد خرید شما خالی می باشد!"
+
+#, python-brace-format
+#~ msgid "Sorry, only {book.stock} of '{book.title}' is available."
+#~ msgstr ""
+#~ "با عرض پوزش فقط تعداد {book.stock} از کتاب {book.title} باقی مانده است!"

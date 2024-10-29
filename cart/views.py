@@ -36,7 +36,13 @@ def add_to_cart_view(request, book_id):
     if form.is_valid():
         cleaned_data = form.cleaned_data
         quantity = cleaned_data['quantity']
-        cart.add(book, quantity, replace_current_quantity=cleaned_data['inplace'])
+        # Check stock availability
+        if book.stock >= quantity:
+            cart.add(book, quantity, replace_current_quantity=cleaned_data['inplace'])
+            book.stock -= quantity  # Decrease the stock
+            book.save()  # Save the changes
+        else:
+            messages.warning(request, _("Sorry! This quantity is not available in our warehouse"))
 
     return redirect('cart:cart_detail')
 
